@@ -17,22 +17,33 @@ public class CardTimer : MonoBehaviour
     #endregion
     [Header("Input Card Asset Here")]
     public CardAsset cardAsset;
-    private CardPositioning VerbW, VerbE, VerbS, TPasses;
+    private VerbAutoTimer AutoTimer;
+    private CardToLists cardLists;
+    private TimePasses T_Pass;
+    private CardPositioning VerbA, VerbE, VerbI, VerbS, TPasses;
     public Vector3 CardPos;
-    public bool in_wSnap,in_tSnap,in_eSnap,in_sSnap;
+    public bool in_aSnap,in_tSnap,in_eSnap,in_sSnap, in_iSnap,InsertOnce;
     private void Awake()
     {
+        cardLists = GetComponent<CardToLists>();
+        T_Pass = GameObject.Find("TimePasses").GetComponent<TimePasses>();
+        AutoTimer = GameObject.Find("TimePasses").GetComponent<VerbAutoTimer>();
         Player_A = GameObject.Find("MainCamera").GetComponent<PlayerActions>();
         ButtonControl = GameObject.Find("MainCamera").GetComponent<UIButtonControl>();
-        VerbW = GameObject.Find("Verb_Work").GetComponent<CardPositioning>();
+        VerbA = GameObject.Find("Verb_Action").GetComponent<CardPositioning>();
         VerbE = GameObject.Find("Verb_Explore").GetComponent<CardPositioning>();
-        VerbS = GameObject.Find("Verb_Study").GetComponent<CardPositioning>();
+        VerbI = GameObject.Find("Verb_Investigate").GetComponent <CardPositioning>();
+        VerbS = GameObject.Find("Verb_Speak").GetComponent<CardPositioning>();
         TPasses = GameObject.Find("TimePasses").GetComponent<CardPositioning>();
         currentState = GameState.ActiveState;
+        if(T_Pass.cardInSnap == false && cardAsset.is_Currency == true)
+        {
+            transform.position = TPasses.SnapPosition;
+        }
     }
     void Start()
     {
-        if (cardAsset.Aspect_Job == true)
+        if (cardAsset.Aspect_Action == true)
         {
                 StartCoroutine("LoseTimer");
                 Time.timeScale = 1;
@@ -49,41 +60,58 @@ public class CardTimer : MonoBehaviour
         }
         if(Player_A.currentState == PlayerActions.GameState.Active)
         {
-            if (CardPos != VerbW.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Job == true))
-                in_wSnap = false;
-            if (CardPos != VerbS.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Manuscript == true))
+            if (CardPos != VerbA.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Action == true || cardAsset.Aspect_Opportunity))
+                in_aSnap = false;
+            if (CardPos != VerbS.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Person == true))
                 in_sSnap = false;
-            if (CardPos != VerbE.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Place == true))
+            if (CardPos != VerbE.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Place == true || cardAsset.Aspect_Opportunity))
                 in_eSnap = false;
+            if (CardPos != VerbI.SnapPosition && (cardAsset.Aspect_Place == true || cardAsset.Aspect_Person == true))
+                in_iSnap = false;
             if (CardPos != TPasses.SnapPosition)
                 in_tSnap = false;
-            if (CardPos == VerbW.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Job == true))
-                {in_wSnap = true;
+            if (CardPos == VerbA.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Action == true || cardAsset.Aspect_Opportunity))
+                {in_aSnap = true;
+                 in_iSnap = false;
                  in_sSnap = false;
                  in_eSnap = false;
                  in_tSnap = false;}
-            if (CardPos == VerbS.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Manuscript == true))
-                {in_wSnap = false;
+            if (CardPos == VerbS.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Person == true))
+                {in_aSnap = false;
+                 in_iSnap = false;
                  in_sSnap = true;
                  in_eSnap = false;
                  in_tSnap = false;}
-            if (CardPos == VerbE.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Place == true))
-                {in_wSnap = false;
+            if (CardPos == VerbE.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Place == true || cardAsset.Aspect_Opportunity))
+                {in_aSnap = false;
+                 in_iSnap = false;
                  in_sSnap = false;
                  in_eSnap = true;
                  in_tSnap = false;}
+            if(CardPos == VerbI.SnapPosition && (cardAsset.Aspect_Place == true || cardAsset.Aspect_Person == true))
+                {in_aSnap = false;
+                 in_iSnap = true;
+                 in_sSnap = false;
+                 in_eSnap = false;
+                 in_tSnap = false;
+                }
             if(CardPos == TPasses.SnapPosition)
-                {in_wSnap = false;
+                {in_aSnap = false;
+                 in_iSnap = false;
                  in_sSnap = false;
                  in_eSnap = false;
                  in_tSnap = true;}
-            if (in_wSnap || in_sSnap|| in_eSnap||in_tSnap)
+            if (in_aSnap || in_sSnap|| in_eSnap||in_tSnap||in_iSnap)
                     currentState = GameState.PauseState;
-                else if (!in_wSnap && !in_sSnap && !in_eSnap && !in_tSnap)
+            else if (!in_aSnap && !in_sSnap && !in_eSnap && !in_tSnap && !in_iSnap)
                     currentState = GameState.ActiveState;
         }
         ///other stuff being updated constantly///
-        if (cardAsset.Aspect_Job == true)
+        if (in_tSnap)
+        {
+            T_Pass.c_timer = GetComponent<CardTimer>();
+        }
+        if (cardAsset.Aspect_Action == true)
         {
             countDown.text = ("" + timeLeft);
         }
@@ -103,7 +131,7 @@ public class CardTimer : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(1);
-            if (cardAsset.Aspect_Job == true)
+            if (cardAsset.Aspect_Action == true)
             {
                 if (currentState == GameState.ActiveState)
                 {

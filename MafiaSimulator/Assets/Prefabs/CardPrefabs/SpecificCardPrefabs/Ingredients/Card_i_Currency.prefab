@@ -492,6 +492,7 @@ GameObject:
   - component: {fileID: 3050941182785896192}
   - component: {fileID: 4571268861667699755}
   - component: {fileID: -2400639897466447083}
+  - component: {fileID: 3398183666556615822}
   m_Layer: 0
   m_Name: Card_i_Currency
   m_TagString: Card
@@ -561,10 +562,12 @@ MonoBehaviour:
   currentState: 0
   cardAsset: {fileID: 11400000, guid: 3eea9c8e303a64287be1e5b391a8fe16, type: 2}
   CardPos: {x: 0, y: 0, z: 0}
-  in_wSnap: 0
+  in_aSnap: 0
   in_tSnap: 0
   in_eSnap: 0
   in_sSnap: 0
+  in_iSnap: 0
+  InsertOnce: 0
 --- !u!114 &-2400639897466447083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,3 +580,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2092556fd7f648179ef3211595aab5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimePasses: {fileID: 0}
+  VerbAction: {fileID: 0}
+  VerbExplore: {fileID: 0}
+  VerbSpeak: {fileID: 0}
+  VerbInstestigate: {fileID: 0}
+  T_Pass: {fileID: 0}
+  Currency: {fileID: 0}
+--- !u!114 &3398183666556615822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3050941182785896207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3338621aa03694b6995c2a6339ff6497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inCurrencyList: 0
