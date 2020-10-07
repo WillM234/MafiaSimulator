@@ -267,7 +267,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 30, y: 40}
+  m_SizeDelta: {x: 100, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3050941181719320814
 Canvas:
@@ -526,8 +526,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 32, y: 42, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 100.151535, y: 149.21396, z: 2}
+  m_Center: {x: 0.0000076293945, y: -0.00065612793, z: 0}
 --- !u!114 &3050941182785896192
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -46,8 +46,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 32, y: 42, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 99.818825, y: 149.9731, z: 2}
+  m_Center: {x: -0.12241745, y: -0.12322235, z: 0}
 --- !u!114 &3864952667139616418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,6 +87,7 @@ MonoBehaviour:
   in_eSnap: 0
   in_sSnap: 0
   in_iSnap: 0
+  InsertOnce: 0
 --- !u!114 &4605967942529211759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2092556fd7f648179ef3211595aab5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimePasses: {fileID: 0}
+  VerbAction: {fileID: 0}
+  VerbExplore: {fileID: 0}
+  VerbSpeak: {fileID: 0}
+  VerbInstestigate: {fileID: 0}
+  T_Pass: {fileID: 0}
+  Currency: {fileID: 0}
 --- !u!1 &3864952667376810894
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +370,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 30, y: 40}
+  m_SizeDelta: {x: 100, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3864952668218952012
 Canvas:
