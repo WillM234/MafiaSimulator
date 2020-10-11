@@ -63,25 +63,6 @@ public class VerbAction : MonoBehaviour
         {
             LastinSnap.transform.position = verbAction.SnapPosition;
         }
-///For tracking if player took or ignored starting opportunities///
-if(actionTimer.timeLeft <= 0)
-        {
-            ///Possitive decision for Being a Mole
-            if (LastinSnap == cardList.cards[5].gameObject)
-            {
-                N_Control.BecameMole = true;
-            }
-            ///Positive decision for a Shady Deal
-            if (LastinSnap == cardList.cards[6].gameObject)
-            {
-                N_Control.TookDeal = true;
-            }
-            ///Possitive decision for The Recruiter
-            if (LastinSnap == cardList.cards[7].gameObject)
-            {
-                N_Control.JoinedFamily = true;
-            }
-        }
     }
 ///used for spawing currency when job is done///
     public void SpawnReward(int amount)

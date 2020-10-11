@@ -634,7 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39dbabc79eee3474685e199700e1955f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 0
+  timeLeft: 1
   currentTime: 0
   countDown: {fileID: 2937696092562395584}
   setTimer: 0
@@ -679,3 +679,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inCurrencyList: 0
+  removed: 0

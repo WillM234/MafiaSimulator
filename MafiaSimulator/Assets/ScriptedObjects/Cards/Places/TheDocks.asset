@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf1103dbd15f46ff90af1ef7c4e7989, type: 3}
   m_Name: TheDocks
   m_EditorClassIdentifier: 
-  Aspect_Action: 0
+  Aspect_Action: 1
   Aspect_Ingredient: 0
   Aspect_Skill: 0
-  Aspect_Place: 0
+  Aspect_Place: 1
   Aspect_Person: 0
   Aspect_Opportunity: 0
   is_Currency: 0
   CurrencyReward: 0
-  Timer: 0
+  aTimer: 120
+  eTimer: 0
+  iTimer: 180
+  sTimer: 0

@@ -15,6 +15,11 @@ public class CardList : MonoBehaviour
     public GameObject Card_O_BeAMole;
     public GameObject Card_O_ShadyDeal; 
     public GameObject Card_O_TheRecruiter;
+    public GameObject Card_O_CreateFamily;
+    public GameObject Card_O_InvestigateWarehouse;
+    public GameObject Card_O_RaidRival;
+    public GameObject Card_O_AssassinateRDon;
+    public GameObject Card_O_BecomeDon;
     [Header("Place Cards")]
     public GameObject Card_P_TheDocks;
 }

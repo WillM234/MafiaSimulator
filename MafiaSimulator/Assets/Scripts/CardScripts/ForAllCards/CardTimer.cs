@@ -16,9 +16,11 @@ public class CardTimer : MonoBehaviour
     private PlayerActions Player_A;
     #endregion
     [Header("Input Card Asset Here")]
+    private bool removed;
     public CardAsset cardAsset;
     public Vector3 CardPos;
     public bool in_aSnap, in_tSnap, in_eSnap, in_sSnap, in_iSnap, InsertOnce;
+    #region Script References
     private NarrativeController N_Control;
     private VerbAutoTimer AutoTimer;
     private CardToLists cardLists;
@@ -29,6 +31,7 @@ public class CardTimer : MonoBehaviour
     private VerbInvestigate vInvestigate;
     private VerbSpeak vSpeak;
     private CurrencyList currentCurrency;
+    #endregion
     private void Awake()
     {///References to other scripts being used by this script, there are a lot of them///
         N_Control = GameObject.Find("NarrativeController").GetComponent<NarrativeController>();
@@ -120,6 +123,11 @@ public class CardTimer : MonoBehaviour
             else if (!in_aSnap && !in_sSnap && !in_eSnap && !in_tSnap && !in_iSnap)
                     currentState = GameState.ActiveState;
   ///Making sure the cards aren't removed if the timer is active on the regular verbs, or at least snap back if they were the last one to be there///
+            ///For TimePasses///
+            if(in_tSnap)
+            {
+                T_Pass.lastInSnap = gameObject;
+            }
             ///For Verb_Action///
             if (in_aSnap)
             {
@@ -149,17 +157,64 @@ public class CardTimer : MonoBehaviour
         }
         else
             countDown.text = "";
-        ///not in use currently///
+        //What happens when card is deactivated
             if(timeLeft <= 0)
             {
                currentState = GameState.DeactiveState;
             }
             if(currentState == GameState.DeactiveState)
             {
+            //stuff that happens during Deactived State, only for Opportunity Cards///
                 if(cardAsset.Aspect_Opportunity == true)
                 {
-                    N_Control.Decision1Made = true;
+                    if(gameObject.name == "Card_O_TheRecruiter")
+                        {
+                        N_Control.DidntJoinFamily = true;
+                        }
+                    if(gameObject.name == "Card_O_ShadyDeal")
+                        {
+                        N_Control.refusedDeal = true;
+                        }
+                    if (N_Control.Decision1Made == false)
+                        {
+                        N_Control.Decision1Made = true;
+                        }
+                    if(N_Control.Decision1Made == true && N_Control.Decision2Made == false)
+                        {
+                        N_Control.AngryFamily += 1;
+                        N_Control.Decision2Made = true;
+                        }
+                    if(N_Control.Decision1Made == true && N_Control.Decision2Made == true && N_Control.Decision3Made == false)
+                        {
+                        N_Control.AngryFamily += 1;
+                        N_Control.Decision3Made = true;
+                        }
+                    if (N_Control.Decision1Made == true && N_Control.Decision2Made == true && N_Control.Decision3Made == true && N_Control.Decision4Made == false)
+                    {
+                        if (gameObject.name == "Card_O_BecomeDon")
+                        {
+                        N_Control.BecameImportant_toFamily = true;
+                        N_Control.Decision4Made = true;
+                        }
+                    }
+                    removeFromLists();
+                    if (removed)
+                    {
                     Destroy(gameObject);
+                    }
+                }
+                if(cardAsset.Aspect_Place == true)
+                {
+                if(gameObject.name == "Card_P_TheDocks")
+                    {
+                    N_Control.AngryFamily += 1;
+                    N_Control.raidFinished = false;
+                    }
+                removeFromLists();
+                if (removed)
+                {
+                    Destroy(gameObject);
+                }  
                 }
             }
     }
@@ -192,5 +247,16 @@ public class CardTimer : MonoBehaviour
                 }
             }
         }
+    }
+//removing cards from lists
+void removeFromLists()
+    {
+        currentCurrency.Currency.Remove(gameObject);
+        TPasses.Card.Remove(gameObject);
+        VerbA.Card.Remove(gameObject);
+        VerbE.Card.Remove(gameObject);
+        VerbI.Card.Remove(gameObject);
+        VerbS.Card.Remove(gameObject);
+        removed = true;
     }
 }

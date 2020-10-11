@@ -25,11 +25,22 @@ public class CurrencyDestruction : MonoBehaviour
     }
     private void Update()
     {
-        if (removed && timePasses.Destroyed == false)
+        if (timePasses.lastInSnap == gameObject && AutoTimer.timeLeft <= 0)
+        {
+            ToDestroy();
+            timePasses.lastInSnap = null;
+        }
+        if(removed == true)
+        {
+            Destroy(gameObject);
+        }
+    }
+    void ToDestroy()
+    {
+       if(timePasses.Destroyed == false)
         {
             timePasses.Destroyed = true;
             timePasses.cardInSnap = false;
-            Destroy(gameObject);
         }
     }
     public void RemoveFromLists()

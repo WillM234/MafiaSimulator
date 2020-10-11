@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TimePasses : MonoBehaviour
 {
+    public GameObject lastInSnap;
     private CardTimer c_Timer;
     private VerbAutoTimer AutoTimer;
     private CardPositioning timePasses, VerbA, VerbE, VerbI, VerbS;
@@ -20,7 +21,8 @@ public class TimePasses : MonoBehaviour
         currentCurrency = GameObject.Find("NarrativeController").GetComponent<CurrencyList>();
     }
     void Update()
-    {if(currentCurrency.Currency.Count > 0)
+    {
+        if(currentCurrency.Currency.Count > 0)
         {
             if (currentCurrency.Currency[0].GetComponent<CardTimer>().in_tSnap == true)
             {
@@ -34,6 +36,7 @@ public class TimePasses : MonoBehaviour
             if (!cardInSnap && Destroyed)
             {
                 currentCurrency.Currency[0].GetComponent<Transform>().position = timePasses.SnapPosition;
+                lastInSnap = currentCurrency.Currency[0].gameObject;
             }
             else if(cardInSnap && Destroyed)
             {
@@ -43,9 +46,10 @@ public class TimePasses : MonoBehaviour
             else if(!cardInSnap && !Destroyed)
             {
                 currentCurrency.Currency[0].GetComponent<Transform>().position = timePasses.SnapPosition;
+                lastInSnap = currentCurrency.Currency[0].gameObject;
             }
         }
-      else if(currentCurrency.Currency.Count < 1)
+        else if(currentCurrency.Currency.Count < 1)
         {
             cardInSnap = false;
             Destroyed = false;
