@@ -291,9 +291,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 728108792442516733}
-  - component: {fileID: 6815482425876296724}
   - component: {fileID: 6564072982201018907}
   - component: {fileID: 1881852619564896063}
+  - component: {fileID: 2083247241278080631}
   m_Layer: 5
   m_Name: Verb_Investigate
   m_TagString: Untagged
@@ -321,19 +321,6 @@ RectTransform:
   m_AnchoredPosition: {x: 457, y: 140}
   m_SizeDelta: {x: 300, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!65 &6815482425876296724
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3829202595605098542}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6564072982201018907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,11 +357,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Card: []
-  X_min: -22
-  X_max: 38
-  Y_min: 60
-  Y_max: 140
-  SnapPosition: {x: 8, y: 100, z: 0}
+  X_min: 383
+  X_max: 531
+  Y_min: -30
+  Y_max: 154
+  SnapPosition: {x: 457, y: 62, z: 0}
+--- !u!114 &2083247241278080631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3829202595605098542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2585ddc65d5a4420915a5fb6eeddb25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LastinSnap: {fileID: 0}
+  SpawnPoint: {x: 0, y: 0, z: 0}
+  cardInPos: 0
+  OneTime: 0
+  locked: 0
 --- !u!1 &3846183702210974583
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,7 +622,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4

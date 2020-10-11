@@ -86,8 +86,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f9923b3988a2419da27cdf2991175f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  c_timer: {fileID: 0}
   cardInSnap: 0
+  Destroyed: 0
 --- !u!1 &2062927539034920506
 GameObject:
   m_ObjectHideFlags: 0

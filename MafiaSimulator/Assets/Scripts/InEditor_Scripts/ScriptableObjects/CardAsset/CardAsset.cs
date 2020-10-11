@@ -7,9 +7,15 @@ public class CardAsset : ScriptableObject
     private CardAsset cardAsset;
     public bool Aspect_Action,Aspect_Ingredient, Aspect_Skill, Aspect_Place, Aspect_Person,Aspect_Opportunity,is_Currency;
 
-    [Header("Fill For Aspect_Action Only")]
+    [Header("Fill for things that go in Verb_Action")]
     public int CurrencyReward;
-    public float Timer;
+    public float aTimer;
+    [Header("Fill for things that go in Verb_Explore")]
+    public float eTimer;
+    [Header("Fill for things that go in Verb_Investigate")]
+    public float iTimer;
+    [Header("Fill for things that go in Verb_Speak")]
+    public float sTimer;
     public CardAsset(CardAsset cardAsset)
     {
         this.cardAsset = cardAsset;

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class PlayerActions : MonoBehaviour
 {
     #region Movement Control Stuff
-    public float X_Max, X_Min, Y_Max, Y_Min,xPos,yPos,zPos;
+    public float X_Max, X_Min, Y_Max, Y_Min,zMin,zMax,xPos,yPos,zPos,zoomSpeed;
     public Vector3 PlayerPos;
     #endregion
     #region Game States
@@ -47,7 +47,16 @@ zPos = transform.position.z;
             {
                 transform.Translate(0f, -1f, 0f);
             }//player moves down
+            if(Input.GetKey(KeyCode.E))
+            {
+                transform.Translate(0f, 0f, 1f);
+            }
+            if(Input.GetKey(KeyCode.Q))
+            {
+                transform.Translate(0f, 0f, -1f);
+            }
         }//stuff that happens when game state is active
+
  /////player position limits////
  if(PlayerPos.x > X_Max)
         {
@@ -65,6 +74,14 @@ zPos = transform.position.z;
         {
             transform.position = new Vector3(xPos,Y_Min,zPos);
         }//max amount the player can move down in the y-direction
+ if(PlayerPos.z < zMin)
+        {
+            transform.position = new Vector3(xPos, yPos, zMin);
+        }//min for zoom(zoomed out)
+ if(PlayerPos.z > zMax)
+        {
+            transform.position = new Vector3(xPos, yPos, zMax);
+        }//max for zoom(zoomed in)
  ///Other Stuff being tracked in update///
     if (Input.GetKeyDown(KeyCode.Escape))
         {

@@ -415,6 +415,7 @@ GameObject:
   - component: {fileID: 6630963652746365433}
   - component: {fileID: 5269946413171120850}
   - component: {fileID: 6218719873266956852}
+  - component: {fileID: 2890476733094830099}
   m_Layer: 0
   m_Name: Card_O_ShadyDeal
   m_TagString: Card
@@ -477,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39dbabc79eee3474685e199700e1955f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 300
+  timeLeft: 240
   currentTime: 0
   countDown: {fileID: 6815704974078863161}
   setTimer: 0
@@ -509,6 +510,18 @@ MonoBehaviour:
   VerbInstestigate: {fileID: 0}
   T_Pass: {fileID: 0}
   Currency: {fileID: 0}
+--- !u!114 &2890476733094830099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6630963652746365430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c98955875df444194ae01886d5027a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6656365766670685606
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +534,7 @@ GameObject:
   - component: {fileID: 1217884225155642836}
   - component: {fileID: 6815704974078863161}
   m_Layer: 0
-  m_Name: Text
+  m_Name: CardTimerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -569,7 +582,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -579,7 +592,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 1
-    m_MaxSize: 20
+    m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

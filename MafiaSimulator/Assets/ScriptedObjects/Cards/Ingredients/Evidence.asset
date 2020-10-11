@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Evidence
   m_EditorClassIdentifier: 
   Aspect_Action: 0
-  Aspect_Ingredient: 0
+  Aspect_Ingredient: 1
   Aspect_Skill: 0
   Aspect_Place: 0
   Aspect_Person: 0
   Aspect_Opportunity: 0
+  is_Currency: 0
   CurrencyReward: 0
   Timer: 0
