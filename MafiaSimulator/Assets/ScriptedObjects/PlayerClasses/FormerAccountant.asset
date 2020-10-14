@@ -15,7 +15,7 @@ MonoBehaviour:
   wasBouncer: 0
   wasAccountant: 1
   wasFarmer: 0
-  starting_Currency: 8
+  starting_Currency: 4
   starting_Athletics: 1
   Starting_Persuasion: 5
   Starting_Mobility: 1

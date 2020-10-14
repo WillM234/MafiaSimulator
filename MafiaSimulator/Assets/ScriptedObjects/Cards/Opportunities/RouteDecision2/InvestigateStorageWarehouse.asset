@@ -22,5 +22,5 @@ MonoBehaviour:
   CurrencyReward: 0
   aTimer: 0
   eTimer: 0
-  iTimer: 300
+  iTimer: 180
   sTimer: 0

@@ -18,7 +18,7 @@ public class PlayerActions : MonoBehaviour
     #endregion
     private void Awake()
     {
-        currentState = GameState.Active;
+        currentState = GameState.Paused;
         PausePanel = GameObject.Find("FullyPausePanel");
     }
     void Update()

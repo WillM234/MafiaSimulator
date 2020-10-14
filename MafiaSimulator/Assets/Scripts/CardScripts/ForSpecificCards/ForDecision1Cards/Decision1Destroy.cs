@@ -10,10 +10,11 @@ public class Decision1Destroy : MonoBehaviour
     private NarrativeController N_Control;
     private CardPositioning Tpasses, VerbA, VerbE, VerbI, VerbS;
     private void Awake()
-    {
+    {///references to other scripts
         aTimer = GameObject.Find("Verb_Action").GetComponent<VerbTimer>();
         vAction = GameObject.Find("Verb_Action").GetComponent<VerbAction>();
         N_Control = GameObject.Find("NarrativeController").GetComponent<NarrativeController>();
+    ///References for list scripts
         Tpasses = GameObject.Find("TimePasses").GetComponent<CardPositioning>();
         VerbA = GameObject.Find("Verb_Action").GetComponent<CardPositioning>();
         VerbE = GameObject.Find("Verb_Explore").GetComponent<CardPositioning>();
@@ -27,23 +28,23 @@ public class Decision1Destroy : MonoBehaviour
             whichChoice();
             if(N_Control.Decision1Made == true)
             {
-                vAction.LastinSnap = null;
+                vAction.LastinSnap = N_Control.empty;
                 removeFromLists();
                 if (removed)
                 {
-                    Destroy(gameObject);
+                    Destroy(gameObject);//destroys attached gameObject
                 }
             }
         }
     }
-    void removeFromLists()
+    void removeFromLists()//removes card from the lists
     {
         Tpasses.Card.Remove(gameObject);
         VerbA.Card.Remove(gameObject);
         VerbE.Card.Remove(gameObject);
         VerbI.Card.Remove(gameObject);
         VerbS.Card.Remove(gameObject);
-        removed = true;
+        removed = true;//sets removed to true if function is run
     }
     void whichChoice()
     {

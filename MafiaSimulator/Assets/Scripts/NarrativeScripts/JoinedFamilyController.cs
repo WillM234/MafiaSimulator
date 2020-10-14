@@ -6,12 +6,14 @@ public class JoinedFamilyController : MonoBehaviour
 {
     [Header("Script References")]
     private NarrativeController N_Control;
+    private O_FeedBackController FBackControl;
     private ListOfCards cardList;
     public bool OneTime;
     public Vector3 SpawnPoint;
     public GameObject OpportunityCard;
     private void Awake()
     {
+        FBackControl = GameObject.Find("MainCamera").GetComponent<O_FeedBackController>();
         N_Control = GetComponent<NarrativeController>();
         cardList = GetComponent<ListOfCards>();
         OneTime = true;
@@ -29,8 +31,9 @@ public class JoinedFamilyController : MonoBehaviour
         {
             if (N_Control.StartingJob.wasFarmer == true)
             {
-                OpportunityCard = cardList.cards[6].gameObject;
+                OpportunityCard = cardList.cards[6].gameObject;//Spawns ShadyDeal card
                 SetOneTime(1);
+                FBackControl.SetOneTime(1);
                 N_Control.startingJobsDone = true;
             }
         }
@@ -39,40 +42,38 @@ public class JoinedFamilyController : MonoBehaviour
         {
             if (N_Control.TookDeal == true || N_Control.JoinedFamily == true)
             {
-                OpportunityCard = cardList.cards[8].gameObject;
+                OpportunityCard = cardList.cards[8].gameObject;//Spawns RaidRival card
                 SetOneTime(1);
+                FBackControl.SetOneTime(1);
                 N_Control.SpawnedDecision2 = true;
             }
         }
         ///Second opportunity, spawns The Docks for raid
         if (N_Control.Decision2Made == true && N_Control.spawnPlace == false)
         {
-            if (N_Control.participateRaid == true)
-            {
-                OpportunityCard = cardList.cards[11].gameObject;
+                OpportunityCard = cardList.cards[11].gameObject;//Spawns TheDocks card
                 SetOneTime(1);
+                FBackControl.SetOneTime(1);
                 N_Control.spawnPlace = true;
-            }
         }
         ///after spawning Docks and taking an Action on it, spawns next opportunity///
         if (N_Control.Decision2Made == true && N_Control.SpawnedDecision3 == false)
         {
             if (N_Control.raidFinished == true)
             {
-                OpportunityCard = cardList.cards[12].gameObject;
+                OpportunityCard = cardList.cards[12].gameObject;//Spawns AssassinateRDon ard
                 SetOneTime(1);
+                FBackControl.SetOneTime(1);
                 N_Control.SpawnedDecision3 = true;
             }
         }
         //Spawning of final Decision for this route, to be or not to be, the Don
         if(N_Control.Decision3Made == true && N_Control.SpawnedDecision4 == false)
         {
-            if(N_Control.assassinatedRDon == true)
-            {
-                OpportunityCard = cardList.cards[13].gameObject;
+                OpportunityCard = cardList.cards[13].gameObject;//Spawns BecomeTheDon card
                 SetOneTime(1);
+                FBackControl.SetOneTime(1);
                 N_Control.SpawnedDecision4 = true;
-            }
         }
     }
     public void spawnO_Card(int times, GameObject card)

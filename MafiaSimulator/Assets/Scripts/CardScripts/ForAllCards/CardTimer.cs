@@ -21,6 +21,7 @@ public class CardTimer : MonoBehaviour
     public Vector3 CardPos;
     public bool in_aSnap, in_tSnap, in_eSnap, in_sSnap, in_iSnap, InsertOnce;
     #region Script References
+    private AngryFamilyTracking AFamTracking;
     private NarrativeController N_Control;
     private VerbAutoTimer AutoTimer;
     private CardToLists cardLists;
@@ -32,8 +33,9 @@ public class CardTimer : MonoBehaviour
     private VerbSpeak vSpeak;
     private CurrencyList currentCurrency;
     #endregion
-    private void Awake()
+private void Awake()
     {///References to other scripts being used by this script, there are a lot of them///
+        AFamTracking = GameObject.Find("NarrativeController").GetComponent<AngryFamilyTracking>();
         N_Control = GameObject.Find("NarrativeController").GetComponent<NarrativeController>();
         AutoTimer = GameObject.Find("TimePasses").GetComponent<VerbAutoTimer>();
         Player_A = GameObject.Find("MainCamera").GetComponent<PlayerActions>();
@@ -167,36 +169,31 @@ public class CardTimer : MonoBehaviour
             //stuff that happens during Deactived State, only for Opportunity Cards///
                 if(cardAsset.Aspect_Opportunity == true)
                 {
-                    if(gameObject.name == "Card_O_TheRecruiter")
+                    if(gameObject.name == "Card_O_TheRecruiter(Clone)")
                         {
                         N_Control.DidntJoinFamily = true;
-                        }
-                    if(gameObject.name == "Card_O_ShadyDeal")
-                        {
-                        N_Control.refusedDeal = true;
-                        }
-                    if (N_Control.Decision1Made == false)
-                        {
                         N_Control.Decision1Made = true;
                         }
-                    if(N_Control.Decision1Made == true && N_Control.Decision2Made == false)
+                    if(gameObject.name == "Card_O_ShadyDeal(Clone)")
                         {
-                        N_Control.AngryFamily += 1;
+                        N_Control.refusedDeal = true;
+                        N_Control.Decision1Made = true;
+                        }
+                    if(gameObject.name == "Card_O_RaidRival(Clone)")
+                        {
+                        AFamTracking.SetOneTime();
                         N_Control.Decision2Made = true;
                         }
-                    if(N_Control.Decision1Made == true && N_Control.Decision2Made == true && N_Control.Decision3Made == false)
+                    if(gameObject.name == "Card_O_AssassinateRDon(Clone)")
                         {
-                        N_Control.AngryFamily += 1;
+                        AFamTracking.SetOneTime();
                         N_Control.Decision3Made = true;
                         }
-                    if (N_Control.Decision1Made == true && N_Control.Decision2Made == true && N_Control.Decision3Made == true && N_Control.Decision4Made == false)
-                    {
-                        if (gameObject.name == "Card_O_BecomeDon")
+                    if (gameObject.name == "Card_O_BecomeDon(Clone)")
                         {
                         N_Control.BecameImportant_toFamily = true;
                         N_Control.Decision4Made = true;
                         }
-                    }
                     removeFromLists();
                     if (removed)
                     {
@@ -205,10 +202,9 @@ public class CardTimer : MonoBehaviour
                 }
                 if(cardAsset.Aspect_Place == true)
                 {
-                if(gameObject.name == "Card_P_TheDocks")
+                if(gameObject.name == "Card_P_TheDocks(Clone)")
                     {
-                    N_Control.AngryFamily += 1;
-                    N_Control.raidFinished = false;
+                    N_Control.raidFinished = true;
                     }
                 removeFromLists();
                 if (removed)

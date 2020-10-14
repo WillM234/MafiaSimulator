@@ -46,9 +46,9 @@ public class NarrativeController : MonoBehaviour
     ///Game Won conditions///
         ///Became import to an existing family
         if(BecameImportant_toFamily == true)
-            {
+        {
             GameWon = true;
-            }
+        }
         //Became the Don of an existing family
         if(BecameTheDon == true)
         {
