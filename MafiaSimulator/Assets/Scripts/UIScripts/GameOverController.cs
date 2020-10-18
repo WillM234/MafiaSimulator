@@ -6,16 +6,20 @@ using UnityEngine.UI;
 public class GameOverController : MonoBehaviour
 {
     private NarrativeController N_Control;
+    private CurrencyList cList; 
     private PlayerActions pActions;
     public GameObject WinPanel, LosePanel;
-    public Text WinReason, LoseReason;
+    public Text WinReason, LoseReason, CurrencyText;
     private void Awake()
     {
         N_Control = GameObject.Find("NarrativeController").GetComponent<NarrativeController>();
+        cList = GameObject.Find("NarrativeController").GetComponent<CurrencyList>();
         pActions = GetComponent<PlayerActions>();
     }
     void Update()
     {
+        ///Teacking Currency for the player
+        CurrencyText.text = ("Currency: " + cList.Currency.Count);
      ///Activating GameOver/Done Panels///
         if(N_Control.GameLost == true)
         {
@@ -44,7 +48,7 @@ public class GameOverController : MonoBehaviour
         ///Won reasons
         if(N_Control.BecameImportant_toFamily == true)
         {
-            WinReason.text = "You are important to an existing family. Maybe you could have go further."; 
+            WinReason.text = "You are important to an existing family. Maybe you could have gone further."; 
         }
         if(N_Control.BecameTheDon == true)
         {

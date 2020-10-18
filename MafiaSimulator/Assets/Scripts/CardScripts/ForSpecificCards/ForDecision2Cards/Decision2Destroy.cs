@@ -22,15 +22,15 @@ public class Decision2Destroy : MonoBehaviour
     }
     void Update()
     {
-        if(vAction.LastinSnap == gameObject && aTimer.timeLeft <= 0 && aTimer.currentState == VerbTimer.GameState.ReadyToCollect)
+        if(vAction.inSlot1 == gameObject && aTimer.timeLeft <= 0)
         {
             whichRoute();
             if(N_Control.Decision2Made == true)
             {
-                vAction.LastinSnap = N_Control.empty;
-                removeFromLists();
+                //removeFromLists();
                 if (removed)
                 {
+                    vAction.inSlot1 = vAction.Empty;
                     Destroy(gameObject);
                 }
             }  
@@ -44,7 +44,7 @@ public class Decision2Destroy : MonoBehaviour
         }
         N_Control.Decision2Made = true;
     }
-    void removeFromLists()
+    public void removeFromLists()
     {
         Tpasses.Card.Remove(gameObject);
         VerbA.Card.Remove(gameObject);

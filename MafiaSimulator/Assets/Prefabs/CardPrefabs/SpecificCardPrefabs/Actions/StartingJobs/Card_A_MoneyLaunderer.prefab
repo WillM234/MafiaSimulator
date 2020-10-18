@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 7772699140117670061}
   - component: {fileID: 8408752934575605835}
   - component: {fileID: -9187957836927105996}
+  - component: {fileID: -6753681942367377204}
   m_Layer: 0
   m_Name: Card_A_MoneyLaunderer
   m_TagString: StartingJob
@@ -239,12 +240,6 @@ MonoBehaviour:
   currentState: 0
   cardAsset: {fileID: 11400000, guid: a81f20113d2ec401cb42cd4ead6ef8cd, type: 2}
   CardPos: {x: 0, y: 0, z: 0}
-  in_aSnap: 0
-  in_tSnap: 0
-  in_eSnap: 0
-  in_sSnap: 0
-  in_iSnap: 0
-  InsertOnce: 0
 --- !u!114 &8408752934575605835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +272,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OneTime: 0
+--- !u!114 &-6753681942367377204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9149443862398466953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0571645aa996145429322b2235bf8871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aS1_Snap: 0
+  aS2_Snap: 0
+  aS3_Snap: 0
+  aS4_Snap: 0
+  eS1_Snap: 0
+  eS2_Snap: 0
+  eS3_Snap: 0
+  eS4_Snap: 0
+  iS1_Snap: 0
+  iS2_Snap: 0
+  iS3_Snap: 0
+  iS4_Snap: 0
+  sS1_Snap: 0
+  sS2_Snap: 0
+  sS3_Snap: 0
+  sS4_Snap: 0
+  in_tSnap: 0
+  empty: {fileID: 0}
 --- !u!1 &9149443862632869546
 GameObject:
   m_ObjectHideFlags: 0

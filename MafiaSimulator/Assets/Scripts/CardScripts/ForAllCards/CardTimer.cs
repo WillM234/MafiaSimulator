@@ -19,7 +19,6 @@ public class CardTimer : MonoBehaviour
     private bool removed;
     public CardAsset cardAsset;
     public Vector3 CardPos;
-    public bool in_aSnap, in_tSnap, in_eSnap, in_sSnap, in_iSnap, InsertOnce;
     #region Script References
     private AngryFamilyTracking AFamTracking;
     private NarrativeController N_Control;
@@ -77,79 +76,7 @@ private void Awake()
         }
         if(Player_A.currentState == PlayerActions.GameState.Active)
         {
- ///flagging if card is in any of the snap positions, this should be rechecked in the future for redundencies///
-            if (CardPos != VerbA.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Action == true || cardAsset.Aspect_Opportunity))
-                in_aSnap = false;
-            if (CardPos != VerbS.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Person == true))
-                in_sSnap = false;
-            if (CardPos != VerbE.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Place == true || cardAsset.Aspect_Opportunity))
-                in_eSnap = false;
-            if (CardPos != VerbI.SnapPosition && (cardAsset.Aspect_Place == true || cardAsset.Aspect_Person == true))
-                in_iSnap = false;
-            if (CardPos != TPasses.SnapPosition)
-                in_tSnap = false;
-            if (CardPos == VerbA.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Action == true || cardAsset.Aspect_Opportunity))
-                {in_aSnap = true;
-                 in_iSnap = false;
-                 in_sSnap = false;
-                 in_eSnap = false;
-                 in_tSnap = false;}
-            if (CardPos == VerbS.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Person == true))
-                {in_aSnap = false;
-                 in_iSnap = false;
-                 in_sSnap = true;
-                 in_eSnap = false;
-                 in_tSnap = false;}
-            if (CardPos == VerbE.SnapPosition && (cardAsset.Aspect_Skill == true || cardAsset.Aspect_Place == true || cardAsset.Aspect_Opportunity))
-                {in_aSnap = false;
-                 in_iSnap = false;
-                 in_sSnap = false;
-                 in_eSnap = true;
-                 in_tSnap = false;}
-            if(CardPos == VerbI.SnapPosition && (cardAsset.Aspect_Place == true || cardAsset.Aspect_Person == true))
-                {in_aSnap = false;
-                 in_iSnap = true;
-                 in_sSnap = false;
-                 in_eSnap = false;
-                 in_tSnap = false;
-                }
-            if(CardPos == TPasses.SnapPosition)
-                {in_aSnap = false;
-                 in_iSnap = false;
-                 in_sSnap = false;
-                 in_eSnap = false;
-                 in_tSnap = true;}
-  ///Stopping card timer countdown if positoned in one of the snap slots///
-            if (in_aSnap || in_sSnap|| in_eSnap||in_tSnap||in_iSnap)
-                    currentState = GameState.PauseState;
-            else if (!in_aSnap && !in_sSnap && !in_eSnap && !in_tSnap && !in_iSnap)
-                    currentState = GameState.ActiveState;
-  ///Making sure the cards aren't removed if the timer is active on the regular verbs, or at least snap back if they were the last one to be there///
-            ///For TimePasses///
-            if(in_tSnap)
-            {
-                T_Pass.lastInSnap = gameObject;
-            }
-            ///For Verb_Action///
-            if (in_aSnap)
-            {
-                vAction.LastinSnap = gameObject;
-            }
-            ///For Verb_Explore///
-            if(in_eSnap)
-            {
-                vExplore.LastinSnap = gameObject;
-            }
-            ///For Verb_Investigate///
-            if (in_iSnap)
-            {
-                vInvestigate.LastinSnap = gameObject;
-            }
-            ///For Verb_Speak///
-            if(in_sSnap)
-            {
-                vSpeak.LastinSnap = gameObject;
-            }
+
         }
   ///other stuff being updated constantly///
         ///card text updates///

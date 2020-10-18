@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Card
   - StartingJob
+  - Decision1
+  - Decision2
+  - Decision3
+  - Decision4
   layers:
   - Default
   - TransparentFX

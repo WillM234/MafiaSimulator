@@ -288,7 +288,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &7353609053524832850
 MonoBehaviour:
@@ -493,6 +493,7 @@ GameObject:
   - component: {fileID: 7353609054592964029}
   - component: {fileID: 8298500657356064406}
   - component: {fileID: 7801917841541195376}
+  - component: {fileID: 8608830146890143193}
   m_Layer: 0
   m_Name: Blank_Card
   m_TagString: Card
@@ -562,12 +563,6 @@ MonoBehaviour:
   currentState: 0
   cardAsset: {fileID: 0}
   CardPos: {x: 0, y: 0, z: 0}
-  in_aSnap: 0
-  in_tSnap: 0
-  in_eSnap: 0
-  in_sSnap: 0
-  in_iSnap: 0
-  InsertOnce: 0
 --- !u!114 &7801917841541195376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,6 +582,35 @@ MonoBehaviour:
   VerbInstestigate: {fileID: 0}
   T_Pass: {fileID: 0}
   Currency: {fileID: 0}
+--- !u!114 &8608830146890143193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7353609054592964018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0571645aa996145429322b2235bf8871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aS1_Snap: 0
+  aS2_Snap: 0
+  aS3_Snap: 0
+  aS4_Snap: 0
+  eS1_Snap: 0
+  eS2_Snap: 0
+  eS3_Snap: 0
+  eS4_Snap: 0
+  iS1_Snap: 0
+  iS2_Snap: 0
+  iS3_Snap: 0
+  iS4_Snap: 0
+  sS1_Snap: 0
+  sS2_Snap: 0
+  sS3_Snap: 0
+  sS4_Snap: 0
+  in_tSnap: 0
 --- !u!1 &7379296783574190562
 GameObject:
   m_ObjectHideFlags: 0

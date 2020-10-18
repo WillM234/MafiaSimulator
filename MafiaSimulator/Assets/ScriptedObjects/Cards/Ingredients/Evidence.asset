@@ -19,5 +19,12 @@ MonoBehaviour:
   Aspect_Person: 0
   Aspect_Opportunity: 0
   is_Currency: 0
-  CurrencyReward: 0
-  Timer: 0
+  CurrencyReward: 4
+  aSlotsNeeded: 2
+  aTimer: 120
+  eTimer: 0
+  eSlotsNeeded: 1
+  iTimer: 0
+  iSlotsNeeded: 1
+  sTimer: 0
+  sSlotsNeeded: 1

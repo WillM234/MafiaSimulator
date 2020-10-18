@@ -20,7 +20,11 @@ MonoBehaviour:
   Aspect_Opportunity: 0
   is_Currency: 0
   CurrencyReward: 4
-  aTimer: 90
+  aSlotsNeeded: 1
+  aTimer: 40
   eTimer: 0
+  eSlotsNeeded: 1
   iTimer: 0
+  iSlotsNeeded: 1
   sTimer: 0
+  sSlotsNeeded: 1

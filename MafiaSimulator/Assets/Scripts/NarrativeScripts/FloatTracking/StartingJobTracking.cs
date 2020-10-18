@@ -7,16 +7,18 @@ public class StartingJobTracking : MonoBehaviour
     public bool OneTime;
     private VerbTimer actionTimer;
     private CardTimer C_Timer;
+    private CardsInSlots cInSlots;
     private NarrativeController N_Control;
     private void Awake()
     {
         actionTimer = GameObject.Find("Verb_Action").GetComponent<VerbTimer>();
+        cInSlots = GetComponent<CardsInSlots>();
         C_Timer = GetComponent <CardTimer>();
         N_Control = GameObject.Find("NarrativeController").GetComponent<NarrativeController>();
     }
     private void Update()
     {
-        if(actionTimer.currentState == VerbTimer.GameState.ReadyToCollect && C_Timer.in_aSnap == true)
+        if(actionTimer.currentState == VerbTimer.GameState.ReadyToCollect && cInSlots.aS1_Snap == true)
         {
             if(!OneTime)
             {

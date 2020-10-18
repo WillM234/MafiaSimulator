@@ -30,17 +30,17 @@ public class StartMenuController : MonoBehaviour
         if(TheFarmer.interactable == false)
         {
             ClassBackground.text = "You are a farmer who has hit hard times. So you have turned to something more lucrative: running moonshine.";
-            ClassBackground2.text = "Starting currency is 4.";
+            ClassBackground2.text = "Starting currency is 2.";
         }
         if(TheAccountant.interactable == false)
         {
             ClassBackground.text = "You are an Accountant who has broken into the money laundering buisness. I wonder how long you will survive.";
-            ClassBackground2.text = "Starting currency is 8.";
+            ClassBackground2.text = "Starting currency is 4.";
         }
         if(TheBouncer.interactable == false)
         {
             ClassBackground.text = "You are a bouncer at a popular club. Someone has taken notice of your efforts. I wonder what they have planned for you.";
-            ClassBackground2.text = "Starting currency is 6.";
+            ClassBackground2.text = "Starting currency is 3.";
         }
     }
     public void ButtonPressSpawn()

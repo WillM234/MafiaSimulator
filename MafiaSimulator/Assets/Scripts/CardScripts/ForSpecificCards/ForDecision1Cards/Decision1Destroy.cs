@@ -23,21 +23,21 @@ public class Decision1Destroy : MonoBehaviour
     }
     void Update()
     {
-        if(vAction.LastinSnap == gameObject && aTimer.timeLeft <= 0)
+        if(vAction.inSlot1 == gameObject && aTimer.timeLeft <= 0 )
         {
             whichChoice();
-            if(N_Control.Decision1Made == true)
+            if(N_Control.Decision1Made == true )
             {
-                vAction.LastinSnap = N_Control.empty;
-                removeFromLists();
+                //removeFromLists();
                 if (removed)
                 {
+                    vAction.inSlot1 = vAction.Empty;
                     Destroy(gameObject);//destroys attached gameObject
                 }
             }
         }
     }
-    void removeFromLists()//removes card from the lists
+    public void removeFromLists()//removes card from the lists
     {
         Tpasses.Card.Remove(gameObject);
         VerbA.Card.Remove(gameObject);

@@ -155,7 +155,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 
 --- !u!1 &3050941181458194234
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +366,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &3050941181719320815
 MonoBehaviour:
@@ -572,6 +572,7 @@ GameObject:
   - component: {fileID: 4571268861667699755}
   - component: {fileID: -2400639897466447083}
   - component: {fileID: 3398183666556615822}
+  - component: {fileID: 8890813782158508826}
   m_Layer: 0
   m_Name: Card_i_Currency
   m_TagString: Card
@@ -641,12 +642,6 @@ MonoBehaviour:
   currentState: 0
   cardAsset: {fileID: 11400000, guid: 3eea9c8e303a64287be1e5b391a8fe16, type: 2}
   CardPos: {x: 0, y: 0, z: 0}
-  in_aSnap: 0
-  in_tSnap: 0
-  in_eSnap: 0
-  in_sSnap: 0
-  in_iSnap: 0
-  InsertOnce: 0
 --- !u!114 &-2400639897466447083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,3 +675,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inCurrencyList: 0
   removed: 0
+--- !u!114 &8890813782158508826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3050941182785896207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0571645aa996145429322b2235bf8871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aS1_Snap: 0
+  aS2_Snap: 0
+  aS3_Snap: 0
+  aS4_Snap: 0
+  eS1_Snap: 0
+  eS2_Snap: 0
+  eS3_Snap: 0
+  eS4_Snap: 0
+  iS1_Snap: 0
+  iS2_Snap: 0
+  iS3_Snap: 0
+  iS4_Snap: 0
+  sS1_Snap: 0
+  sS2_Snap: 0
+  sS3_Snap: 0
+  sS4_Snap: 0
+  in_tSnap: 0

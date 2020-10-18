@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimePasses : MonoBehaviour
 {
-    public GameObject lastInSnap;
+    public GameObject lastInSnap, Empty;
     private CardTimer c_Timer;
     private VerbAutoTimer AutoTimer;
     private CardPositioning timePasses, VerbA, VerbE, VerbI, VerbS;
@@ -24,9 +24,10 @@ public class TimePasses : MonoBehaviour
     {
         if(currentCurrency.Currency.Count > 0)
         {
-            if (currentCurrency.Currency[0].GetComponent<CardTimer>().in_tSnap == true)
+            if (currentCurrency.Currency[0].GetComponent<CardsInSlots>().in_tSnap == true)
             {
                 cardInSnap = true;
+                lastInSnap = currentCurrency.Currency[0].gameObject;
             }
             else
             {
@@ -46,7 +47,7 @@ public class TimePasses : MonoBehaviour
             else if(!cardInSnap && !Destroyed)
             {
                 currentCurrency.Currency[0].GetComponent<Transform>().position = timePasses.SnapPosition;
-                lastInSnap = currentCurrency.Currency[0].gameObject;
+                lastInSnap = Empty;
             }
         }
         else if(currentCurrency.Currency.Count < 1)

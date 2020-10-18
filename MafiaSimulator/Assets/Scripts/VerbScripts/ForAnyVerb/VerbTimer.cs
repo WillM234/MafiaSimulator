@@ -14,7 +14,7 @@ public class VerbTimer : MonoBehaviour
     #region GameState Stuff
     [Header("GamesState Stuff")]
     private PlayerActions Player_A;
-    public enum GameState {Start,Active,Paused,ReadyToCollect}
+    public enum GameState {Start,Active,Paused,ReadyToCollect, reSet}
     public GameState currentState, lastState;
     public bool SetLastState,setCurrentState,OneTime;
     #endregion
@@ -22,10 +22,18 @@ public class VerbTimer : MonoBehaviour
     [Header("collection Stuff")]
     public Button button;
     public Text buttonText;
+    private VerbAction vAction;
+    private JoinedFamilyController jFam_Control;
     #endregion
     private void Awake()
     {
         Player_A = GameObject.Find("MainCamera").GetComponent<PlayerActions>();
+        jFam_Control = GameObject.Find("NarrativeController").GetComponent<JoinedFamilyController>();
+        if (gameObject.name == "Verb_Action")
+        {
+            vAction = GetComponent<VerbAction>();
+        }
+        else vAction = GameObject.Find("Verb_Action").GetComponent<VerbAction>();
         currentState = GameState.Start;
         startTime = timeLeft; 
     }
@@ -80,8 +88,31 @@ public class VerbTimer : MonoBehaviour
         }
     if(currentState == GameState.Active || currentState == GameState.Paused)
         {
+            jFam_Control.OneTime = true;
             buttonText.text = "";
             button.interactable = false;
+        }
+    //reSet gamestate//
+    if(currentState == GameState.reSet)
+        {
+            if(vAction.inSlot1.gameObject.tag == "Decision1")
+            {
+                vAction.inSlot1.GetComponent<Decision1Destroy>().removeFromLists();
+            }
+            if (vAction.inSlot1.gameObject.tag == "Decision2")
+            {
+                vAction.inSlot1.GetComponent<Decision2Destroy>().removeFromLists();
+            }
+            if (vAction.inSlot1.gameObject.tag == "Decision3")
+            {
+                vAction.inSlot1.GetComponent<Decision3Destroy>().removeFromList();
+            }
+            if(vAction.inSlot1.gameObject.name == "Card_P_TheDocks(Clone)")
+            {
+                vAction.inSlot1.GetComponent<PlaceDestruction>().removeFromLists();
+            }
+            jFam_Control.SetOneTime(1);
+            currentState = GameState.Start;
         }
     }
     IEnumerator LoseTime()
@@ -119,7 +150,7 @@ public class VerbTimer : MonoBehaviour
         }
        if(currentState == GameState.ReadyToCollect)
         {
-            currentState = GameState.Start;
+            currentState = GameState.reSet;
         }
     }
     public void setLastState()

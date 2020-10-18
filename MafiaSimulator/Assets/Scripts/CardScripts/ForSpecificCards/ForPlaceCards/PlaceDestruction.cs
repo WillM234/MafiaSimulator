@@ -22,15 +22,15 @@ public class PlaceDestruction : MonoBehaviour
     }
     void Update()
     {
-        if(vAction.LastinSnap == gameObject && aTimer.timeLeft <= 0 && aTimer.currentState == VerbTimer.GameState.ReadyToCollect)
+        if(vAction.inSlot1 == gameObject && aTimer.timeLeft <= 0)
         {
             whichCard();
             if(N_Control.raidFinished == true)
             {
-                removeFromLists();
-                vAction.LastinSnap = N_Control.empty;
+                //removeFromLists();
                 if (removed)
                 {
+                    vAction.inSlot1 = vAction.Empty;
                     Destroy(gameObject);
                 }
             } 
@@ -43,7 +43,7 @@ public class PlaceDestruction : MonoBehaviour
             N_Control.raidFinished = true;
         }
     }
-    void removeFromLists()
+    public void removeFromLists()
     {
         Tpasses.Card.Remove(gameObject);
         VerbA.Card.Remove(gameObject);
