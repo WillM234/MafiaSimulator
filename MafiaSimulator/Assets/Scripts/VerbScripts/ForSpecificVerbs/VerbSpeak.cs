@@ -74,10 +74,12 @@ public class VerbSpeak : MonoBehaviour
         if (speakTimer.currentState != VerbTimer.GameState.Start)
         {
             locked = true;
+            verbSpeak.locked = true;
         }
         else
         {
             locked = false;
+            verbSpeak.locked = false;
         }
         ///if i used a while loop, Unity crashed///
         if (locked == true)

@@ -76,10 +76,12 @@ public class VerbInvestigate : MonoBehaviour
         if (investigateTimer.currentState != VerbTimer.GameState.Start)
         {
             locked = true;
+            verbInvestigate.locked = true;
         }
         else
         {
             locked = false;
+            verbInvestigate.locked = false;
         }
         ///if i used a while loop, Unity crashed///
         if (locked == true)

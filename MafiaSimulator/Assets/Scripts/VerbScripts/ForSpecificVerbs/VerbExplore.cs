@@ -74,10 +74,12 @@ public class VerbExplore : MonoBehaviour
         if(exploreTimer.currentState != VerbTimer.GameState.Start)
         {
             locked = true;
+            verbExplore.locked = true;
         }
         else
         {
             locked = false;
+            verbExplore.locked = false;
         }
 ///if i used a while loop, Unity crashed///
         if(locked == true)

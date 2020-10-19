@@ -81,15 +81,18 @@ public class VerbAction : MonoBehaviour
         if (actionTimer.currentState != VerbTimer.GameState.Start)
         {
             locked = true;
+            verbAction.locked = true;
         }
         else
         {
             locked = false;
+            verbAction.locked = false;
         }
 ///used for controlling spawn rate, if not used just spawned infinately///
         if (actionTimer.timeLeft > 0)
         {
             OneTime = false;
+
         }
         if (actionTimer.timeLeft <= 0 && actionTimer.currentState == VerbTimer.GameState.reSet)
         {
