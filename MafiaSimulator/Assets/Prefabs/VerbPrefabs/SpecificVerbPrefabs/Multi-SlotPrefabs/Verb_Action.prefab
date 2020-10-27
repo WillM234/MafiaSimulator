@@ -515,6 +515,7 @@ GameObject:
   - component: {fileID: 1230404909988871278}
   - component: {fileID: 7471507240948911275}
   - component: {fileID: 1650807412895816896}
+  - component: {fileID: 1993784156}
   m_Layer: 5
   m_Name: Verb_Action
   m_TagString: Untagged
@@ -529,7 +530,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4359340657259365460}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -564,17 +565,17 @@ MonoBehaviour:
   S2x_Max: 426
   S2y_Min: 364
   S2y_Max: 538
-  S2_Snap: {x: 349, y: 451, z: 1}
+  S2_Snap: {x: 330, y: 465, z: 1}
   S3x_Min: 502
   S3x_Max: 656
   S3y_Min: 364
   S3y_Max: 538
-  S3_Snap: {x: 579, y: 451, z: 1}
+  S3_Snap: {x: 560, y: 465, z: 1}
   S4x_Min: 722
   S4x_Max: 876
   S4y_Min: 364
   S4y_Max: 538
-  S4_Snap: {x: 799, y: 451, z: 1}
+  S4_Snap: {x: 780, y: 465, z: 1}
   X_min: -560
   X_max: -414
   Y_min: -30
@@ -663,6 +664,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 4895824402878607646}
+--- !u!114 &1993784156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359340657259365460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9736428f3a449bda9d52e36fb55b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mGoal: 0
+  pGoal: 0
+  aGoal: 0
+  cMobilityTotal: 0
+  cPersuasionTotal: 0
+  cAthleticsTotal: 0
+  fail: 0
+  part_Success: 0
+  full_Success: 0
+  useM: 0
+  useA: 0
+  useP: 0
 --- !u!1 &6789617826371938866
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,7 +911,7 @@ GameObject:
   - component: {fileID: 3976614809498936694}
   - component: {fileID: 7134394766447003525}
   m_Layer: 5
-  m_Name: TimerText
+  m_Name: aTimerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -932,7 +957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -988,7 +1013,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -0.001, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0.254}
   m_AnchorMax: {x: 0.89866674, y: 0.75335217}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.000015258789, y: 0.000005722046}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4895824402878607646

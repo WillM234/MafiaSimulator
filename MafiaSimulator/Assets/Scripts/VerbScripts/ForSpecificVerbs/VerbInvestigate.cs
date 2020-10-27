@@ -29,7 +29,7 @@ public class VerbInvestigate : MonoBehaviour
                 cardInPos = true;
                 if (investigateTimer.currentState == VerbTimer.GameState.Start)
                 {
-                    investigateTimer.timeLeft = card.GetComponent<CardTimer>().cardAsset.eTimer;
+                    investigateTimer.timeLeft = inSlot1.GetComponent<CardTimer>().cardAsset.iTimer;
                     investigateTimer.startTime = investigateTimer.timeLeft;
                 }
             }

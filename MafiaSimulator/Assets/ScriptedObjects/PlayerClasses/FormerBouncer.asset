@@ -16,7 +16,7 @@ MonoBehaviour:
   wasAccountant: 0
   wasFarmer: 0
   starting_Currency: 3
-  starting_Athletics: 5
+  starting_Athletics: 1
   Starting_Persuasion: 1
   Starting_Mobility: 1
   PlayerClassName: The Bouncer

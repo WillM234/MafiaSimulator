@@ -28,7 +28,7 @@ public class VerbExplore : MonoBehaviour
                 cardInPos = true;
                 if(exploreTimer.currentState == VerbTimer.GameState.Start)
                 {
-                    exploreTimer.timeLeft = card.GetComponent<CardTimer>().cardAsset.eTimer;
+                    exploreTimer.timeLeft = inSlot1.GetComponent<CardTimer>().cardAsset.eTimer;
                     exploreTimer.startTime = exploreTimer.timeLeft;
                 }
             }

@@ -108,12 +108,12 @@ private void Awake()
                         }
                     if(gameObject.name == "Card_O_RaidRival(Clone)")
                         {
-                        AFamTracking.SetOneTime();
+                        //AFamTracking.SetOneTime();
                         N_Control.Decision2Made = true;
                         }
                     if(gameObject.name == "Card_O_AssassinateRDon(Clone)")
                         {
-                        AFamTracking.SetOneTime();
+                        //AFamTracking.SetOneTime();
                         N_Control.Decision3Made = true;
                         }
                     if (gameObject.name == "Card_O_BecomeDon(Clone)")

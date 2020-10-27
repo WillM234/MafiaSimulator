@@ -23,7 +23,7 @@ public class Decision1Destroy : MonoBehaviour
     }
     void Update()
     {
-        if(vAction.inSlot1 == gameObject && aTimer.timeLeft <= 0 )
+        if(vAction.inSlot1 == gameObject && aTimer.timeLeft <= 0 && aTimer.currentState == VerbTimer.GameState.ReadyToCollect)
         {
             whichChoice();
             if(N_Control.Decision1Made == true )

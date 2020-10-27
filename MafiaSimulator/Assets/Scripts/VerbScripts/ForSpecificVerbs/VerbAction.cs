@@ -35,7 +35,7 @@ public class VerbAction : MonoBehaviour
                 rewardAmount = card.GetComponent<CardTimer>().cardAsset.CurrencyReward;
                 if (actionTimer.currentState == VerbTimer.GameState.Start)
                 {
-                    actionTimer.timeLeft = card.GetComponent<CardTimer>().cardAsset.aTimer;
+                    actionTimer.timeLeft = inSlot1.GetComponent<CardTimer>().cardAsset.aTimer;
                     actionTimer.startTime = actionTimer.timeLeft;
                 }
             }

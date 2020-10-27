@@ -23,12 +23,12 @@ public class VerbSpeak : MonoBehaviour
     {
         foreach (GameObject card in verbSpeak.Card)
         {
-            if (card.transform.position == verbSpeak.SnapPosition)
+            if (card.transform.position == verbSpeak.S1_Snap)
             {
                 cardInPos = true;
                 if (speakTimer.currentState == VerbTimer.GameState.Start)
                 {
-                    speakTimer.timeLeft = card.GetComponent<CardTimer>().cardAsset.eTimer;
+                    speakTimer.timeLeft = inSlot1.GetComponent<CardTimer>().cardAsset.sTimer;
                     speakTimer.startTime = speakTimer.timeLeft;
                 }
             }

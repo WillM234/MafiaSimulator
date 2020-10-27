@@ -12,11 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf1103dbd15f46ff90af1ef7c4e7989, type: 3}
   m_Name: Mobility
   m_EditorClassIdentifier: 
+  MobilityValue: 1
+  AthleticsValue: 0
+  PersuasionValue: 0
   Aspect_Action: 0
   Aspect_Ingredient: 0
-  Aspect_Skill: 0
+  Aspect_Skill: 1
   Aspect_Place: 0
   Aspect_Person: 0
   Aspect_Opportunity: 0
-  CurrencyReward: 0
-  Timer: 0
+  is_Currency: 0
+  CurrencyReward: 2
+  aSlotsNeeded: 0
+  aTimer: 30
+  eTimer: 30
+  eSlotsNeeded: 0
+  iTimer: 30
+  iSlotsNeeded: 0
+  sTimer: 30
+  sSlotsNeeded: 0
+  mGoal: 0
+  aGoal: 0
+  pGoal: 0

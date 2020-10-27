@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf1103dbd15f46ff90af1ef7c4e7989, type: 3}
   m_Name: ParticipateInARaid
   m_EditorClassIdentifier: 
+  MobilityValue: 0
+  AthleticsValue: 0
+  PersuasionValue: 0
   Aspect_Action: 0
   Aspect_Ingredient: 0
   Aspect_Skill: 0
@@ -20,7 +23,7 @@ MonoBehaviour:
   Aspect_Opportunity: 1
   is_Currency: 0
   CurrencyReward: 0
-  aSlotsNeeded: 1
+  aSlotsNeeded: 4
   aTimer: 120
   eTimer: 0
   eSlotsNeeded: 1
@@ -28,3 +31,6 @@ MonoBehaviour:
   iSlotsNeeded: 1
   sTimer: 0
   sSlotsNeeded: 1
+  mGoal: 0
+  aGoal: 0
+  pGoal: 0

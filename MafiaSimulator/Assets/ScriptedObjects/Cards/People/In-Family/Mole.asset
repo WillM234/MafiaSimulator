@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf1103dbd15f46ff90af1ef7c4e7989, type: 3}
   m_Name: Mole
   m_EditorClassIdentifier: 
+  MobilityValue: 1
+  AthleticsValue: 1
+  PersuasionValue: 3
   Aspect_Action: 0
   Aspect_Ingredient: 0
   Aspect_Skill: 0
@@ -20,4 +23,14 @@ MonoBehaviour:
   Aspect_Opportunity: 0
   is_Currency: 0
   CurrencyReward: 0
-  Timer: 0
+  aSlotsNeeded: 0
+  aTimer: 0
+  eTimer: 0
+  eSlotsNeeded: 0
+  iTimer: 0
+  iSlotsNeeded: 0
+  sTimer: 0
+  sSlotsNeeded: 0
+  mGoal: 0
+  aGoal: 0
+  pGoal: 0

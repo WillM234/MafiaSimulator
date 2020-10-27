@@ -9,7 +9,8 @@ public class StartMenuController : MonoBehaviour
     public PlayerClass Farmer, Accountant, Bouncer;
     public GameObject Currency;
     public GameObject StartingJob;
-    public Vector3 JobSpawn, CurrencySpawn;
+    public GameObject MobilCard, AthCard, PersCard;
+    public Vector3 JobSpawn, CurrencySpawn, MobilitySpawn, AthleticsSpawn, PersuasionSpawn;
     public int NumCurrency;
     private NarrativeController N_Control;
     private ListOfCards cardList;
@@ -30,17 +31,17 @@ public class StartMenuController : MonoBehaviour
         if(TheFarmer.interactable == false)
         {
             ClassBackground.text = "You are a farmer who has hit hard times. So you have turned to something more lucrative: running moonshine.";
-            ClassBackground2.text = "Starting currency is 2.";
+            ClassBackground2.text = "Starting currency is 2. Your starting Athletics, Mobility, and Persuasion are 1.";
         }
         if(TheAccountant.interactable == false)
         {
             ClassBackground.text = "You are an Accountant who has broken into the money laundering buisness. I wonder how long you will survive.";
-            ClassBackground2.text = "Starting currency is 4.";
+            ClassBackground2.text = "Starting currency is 4. Your starting Athletics, Mobility, and Persuasion are 1.";
         }
         if(TheBouncer.interactable == false)
         {
             ClassBackground.text = "You are a bouncer at a popular club. Someone has taken notice of your efforts. I wonder what they have planned for you.";
-            ClassBackground2.text = "Starting currency is 3.";
+            ClassBackground2.text = "Starting currency is 3. Your starting Athletics, Mobility, and Persuasion are 1.";
         }
     }
     public void ButtonPressSpawn()
@@ -48,6 +49,7 @@ public class StartMenuController : MonoBehaviour
         pActions.currentState = PlayerActions.GameState.Active;
         SpawningStartingJob(1, StartingJob);
         SpawnStartingCurrency(NumCurrency, Currency);
+        SpawnStartingSkills(1, MobilCard, AthCard, PersCard);
     }
     void SpawningStartingJob(int times, GameObject card)
     {
@@ -61,6 +63,21 @@ public class StartMenuController : MonoBehaviour
         for (int i = 0; i < times; i++)
         {
             Instantiate(card, CurrencySpawn, Quaternion.identity);
+        }
+    }
+    void SpawnStartingSkills(int times, GameObject Mobility, GameObject Athletics, GameObject Persuasion)
+    {
+        for (int i = 0; i < times; i++)
+        {
+            Instantiate(Mobility, MobilitySpawn, Quaternion.identity);
+        }
+        for (int i = 0; i < times; i++)
+        {
+            Instantiate(Athletics, AthleticsSpawn, Quaternion.identity);
+        }
+        for (int i = 0; i < times; i++)
+        {
+            Instantiate(Persuasion,PersuasionSpawn, Quaternion.identity);
         }
     }
     public void setPClassFarmer()

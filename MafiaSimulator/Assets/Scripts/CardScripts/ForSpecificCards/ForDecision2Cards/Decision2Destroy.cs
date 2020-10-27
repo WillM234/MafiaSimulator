@@ -22,7 +22,7 @@ public class Decision2Destroy : MonoBehaviour
     }
     void Update()
     {
-        if(vAction.inSlot1 == gameObject && aTimer.timeLeft <= 0)
+        if(vAction.inSlot1 == gameObject && aTimer.timeLeft <= 0 && aTimer.currentState == VerbTimer.GameState.ReadyToCollect)
         {
             whichRoute();
             if(N_Control.Decision2Made == true)

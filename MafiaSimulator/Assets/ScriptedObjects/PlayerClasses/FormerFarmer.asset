@@ -18,5 +18,5 @@ MonoBehaviour:
   starting_Currency: 2
   starting_Athletics: 1
   Starting_Persuasion: 1
-  Starting_Mobility: 5
+  Starting_Mobility: 1
   PlayerClassName: The Farmer
