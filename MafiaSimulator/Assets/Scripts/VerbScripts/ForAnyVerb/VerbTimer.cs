@@ -23,12 +23,20 @@ public class VerbTimer : MonoBehaviour
     public Button button;
     public Text buttonText;
     private VerbAction vAction;
+    private NarrativeController N_Control;
     private JoinedFamilyController jFam_Control;
+    private MoleRouteController mRouteControl;
+    private AgressiveCustomFamily cAgroFamControl;
+    private SpeakSkills sSkills;
     #endregion
     private void Awake()
     {
         Player_A = GameObject.Find("MainCamera").GetComponent<PlayerActions>();
         jFam_Control = GameObject.Find("NarrativeController").GetComponent<JoinedFamilyController>();
+        mRouteControl = GameObject.Find("NarrativeController").GetComponent<MoleRouteController>();
+        cAgroFamControl = GameObject.Find("NarrativeController").GetComponent<AgressiveCustomFamily>();
+        N_Control = GameObject.Find("NarrativeController").GetComponent<NarrativeController>();
+        sSkills = GameObject.Find("Verb_Speak").GetComponent<SpeakSkills>();
         if (gameObject.name == "Verb_Action")
         {
             vAction = GetComponent<VerbAction>();
@@ -111,7 +119,23 @@ public class VerbTimer : MonoBehaviour
             {
                 vAction.inSlot1.GetComponent<PlaceDestruction>().removeFromLists();
             }
-            jFam_Control.SetOneTime(1);
+            if(gameObject.name == "Verb_Speak")
+            {
+                sSkills.setRandNum(1);
+                sSkills.setOneTime(1);
+            }
+            if(N_Control.StartingJob.wasFarmer == true)
+            {
+                jFam_Control.SetOneTime(1);
+            }
+            if(N_Control.StartingJob.wasAccountant == true)
+            {
+                mRouteControl.SetOneTime(1);
+            }
+            if(N_Control.StartingJob.wasBouncer == true)
+            {
+                cAgroFamControl.SetOneTime(1);
+            }
             currentState = GameState.Start;
         }
     }

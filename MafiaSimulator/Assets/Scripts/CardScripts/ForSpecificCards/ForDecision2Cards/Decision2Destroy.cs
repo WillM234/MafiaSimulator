@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Decision2Destroy : MonoBehaviour
 {
-    private bool removed;
+    public bool removed;
     private VerbAction vAction;
     private VerbTimer aTimer;
     private NarrativeController N_Control;
@@ -25,15 +25,11 @@ public class Decision2Destroy : MonoBehaviour
         if(vAction.inSlot1 == gameObject && aTimer.timeLeft <= 0 && aTimer.currentState == VerbTimer.GameState.ReadyToCollect)
         {
             whichRoute();
-            if(N_Control.Decision2Made == true)
-            {
-                //removeFromLists();
-                if (removed)
-                {
-                    vAction.inSlot1 = vAction.Empty;
-                    Destroy(gameObject);
-                }
-            }  
+        }
+        if (removed)
+        {
+            vAction.inSlot1 = vAction.Empty;
+            Destroy(gameObject);
         }
     }
     void whichRoute()
@@ -41,6 +37,7 @@ public class Decision2Destroy : MonoBehaviour
         if((N_Control.TookDeal == true || N_Control.JoinedFamily == true))
         {
             N_Control.participateRaid = true;
+            N_Control.raidFinished = true;
         }
         N_Control.Decision2Made = true;
     }

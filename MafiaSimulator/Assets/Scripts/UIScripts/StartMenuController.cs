@@ -12,6 +12,8 @@ public class StartMenuController : MonoBehaviour
     public GameObject MobilCard, AthCard, PersCard;
     public Vector3 JobSpawn, CurrencySpawn, MobilitySpawn, AthleticsSpawn, PersuasionSpawn;
     public int NumCurrency;
+    public AudioSource aSource;
+    public AudioClip bGround1;
     private NarrativeController N_Control;
     private ListOfCards cardList;
     private PlayerActions pActions;
@@ -46,6 +48,7 @@ public class StartMenuController : MonoBehaviour
     }
     public void ButtonPressSpawn()
     {
+        aSource.PlayOneShot(bGround1);
         pActions.currentState = PlayerActions.GameState.Active;
         SpawningStartingJob(1, StartingJob);
         SpawnStartingCurrency(NumCurrency, Currency);

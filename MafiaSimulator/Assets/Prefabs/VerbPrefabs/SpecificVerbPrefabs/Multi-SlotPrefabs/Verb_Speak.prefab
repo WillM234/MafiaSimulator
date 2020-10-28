@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8772585, g: 0.1779548, b: 0.1779548, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -240,7 +240,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5885068201158004287}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3, y: 0.40560564}
   m_AnchorMax: {x: 0.6986667, y: 1}
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6268471, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -665,8 +665,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8034211706500177863}
   - {fileID: 4258269005000781595}
+  - {fileID: 8034211706500177863}
   m_Father: {fileID: 8354389728169653116}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -744,7 +744,7 @@ RectTransform:
   - {fileID: 2074825092330004836}
   - {fileID: 6047491196230298977}
   m_Father: {fileID: 5885068201158004287}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.11333334, y: 0.2216623}
   m_AnchorMax: {x: 0.892, y: 0.7216623}
@@ -889,6 +889,8 @@ GameObject:
   - component: {fileID: 7601402478906213503}
   - component: {fileID: 7601402478906213500}
   - component: {fileID: 8237556186531455631}
+  - component: {fileID: 5649422511293899043}
+  - component: {fileID: 6655049727134575010}
   m_Layer: 5
   m_Name: Verb_Speak
   m_TagString: Untagged
@@ -1034,6 +1036,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 4712560499373430332}
+--- !u!114 &5649422511293899043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7601402478906213475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c8870c81a6445d387129f59d65f6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoText: {fileID: 0}
+--- !u!114 &6655049727134575010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7601402478906213475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a18d30c5432064fc4a9de5516a1685cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneTime: 0
+  oneRand: 0
+  randNum: 0
+  SpawnPoint: {x: 0, y: 0, z: 0}
+  CardtoSpawn: {fileID: 0}
+  Empty: {fileID: 4476860135624328888, guid: 7590c942f185d48b8acf5f8435bedcf1, type: 3}
 --- !u!1 &7826658476013939167
 GameObject:
   m_ObjectHideFlags: 0

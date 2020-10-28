@@ -108,12 +108,11 @@ private void Awake()
                         }
                     if(gameObject.name == "Card_O_RaidRival(Clone)")
                         {
-                        //AFamTracking.SetOneTime();
                         N_Control.Decision2Made = true;
+                        N_Control.raidFinished = true;
                         }
                     if(gameObject.name == "Card_O_AssassinateRDon(Clone)")
                         {
-                        //AFamTracking.SetOneTime();
                         N_Control.Decision3Made = true;
                         }
                     if (gameObject.name == "Card_O_BecomeDon(Clone)")
@@ -129,10 +128,10 @@ private void Awake()
                 }
                 if(cardAsset.Aspect_Place == true)
                 {
-                if(gameObject.name == "Card_P_TheDocks(Clone)")
+                /*if(gameObject.name == "Card_P_TheDocks(Clone)")
                     {
                     N_Control.raidFinished = true;
-                    }
+                    }*/
                 removeFromLists();
                 if (removed)
                 {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Decision1Destroy : MonoBehaviour
 {
-    private bool removed;
+    public bool removed;
     private VerbAction vAction;
     private VerbTimer aTimer;
     private NarrativeController N_Control;
@@ -26,15 +26,11 @@ public class Decision1Destroy : MonoBehaviour
         if(vAction.inSlot1 == gameObject && aTimer.timeLeft <= 0 && aTimer.currentState == VerbTimer.GameState.ReadyToCollect)
         {
             whichChoice();
-            if(N_Control.Decision1Made == true )
-            {
-                //removeFromLists();
-                if (removed)
-                {
-                    vAction.inSlot1 = vAction.Empty;
-                    Destroy(gameObject);//destroys attached gameObject
-                }
-            }
+        }
+        if (removed)
+        {
+            vAction.inSlot1 = vAction.Empty;
+            Destroy(gameObject);//destroys attached gameObject
         }
     }
     public void removeFromLists()//removes card from the lists

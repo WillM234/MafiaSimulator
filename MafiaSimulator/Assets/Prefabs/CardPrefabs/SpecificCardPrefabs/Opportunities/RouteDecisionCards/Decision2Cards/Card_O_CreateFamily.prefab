@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39dbabc79eee3474685e199700e1955f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 240
+  timeLeft: 90
   currentTime: 0
   countDown: {fileID: 6952133325426855866}
   setTimer: 0
@@ -370,6 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4c1399da8dc427bb8d4f1bcf96feca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  removed: 0
 --- !u!114 &-8311609633260606410
 MonoBehaviour:
   m_ObjectHideFlags: 0

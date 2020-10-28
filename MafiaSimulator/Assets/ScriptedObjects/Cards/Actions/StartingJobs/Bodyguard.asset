@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf1103dbd15f46ff90af1ef7c4e7989, type: 3}
   m_Name: Bodyguard
   m_EditorClassIdentifier: 
+  MobilityValue: 0
+  AthleticsValue: 0
+  PersuasionValue: 0
   Aspect_Action: 1
   Aspect_Ingredient: 0
   Aspect_Skill: 0
@@ -22,9 +25,17 @@ MonoBehaviour:
   CurrencyReward: 2
   aSlotsNeeded: 1
   aTimer: 30
+  actionString: Another day, another door to stand by.
   eTimer: 0
   eSlotsNeeded: 1
+  exploreString: 
   iTimer: 0
   iSlotsNeeded: 1
+  investString: 
   sTimer: 0
   sSlotsNeeded: 1
+  speakString: 
+  OppString: 
+  mGoal: 0
+  aGoal: 0
+  pGoal: 0
