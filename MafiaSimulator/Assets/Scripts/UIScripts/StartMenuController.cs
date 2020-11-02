@@ -48,7 +48,7 @@ public class StartMenuController : MonoBehaviour
     }
     public void ButtonPressSpawn()
     {
-        aSource.PlayOneShot(bGround1);
+        aSource.Play();
         pActions.currentState = PlayerActions.GameState.Active;
         SpawningStartingJob(1, StartingJob);
         SpawnStartingCurrency(NumCurrency, Currency);

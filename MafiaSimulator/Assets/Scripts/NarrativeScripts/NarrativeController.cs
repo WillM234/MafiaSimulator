@@ -7,34 +7,50 @@ public class NarrativeController : MonoBehaviour
     //Referenced Scripts
     private ListOfCards listAllCards;
     public PlayerClass StartingJob;
-    //Game Conditions
+    [Header("Game Conditions")]
     public bool GameWon, GameLost;
-    //won by:
-    public bool BecameTheDon, BecameImportant_toFamily;
-    //lost by:
-    public bool byLackofFunds, refusedMole, bySentToPrison, byKickedOut;
-    //Decision 1 flags,routes split with these
-    public bool BecameMole, TookDeal, JoinedFamily;
-    public bool refusedDeal, DidntJoinFamily;
+    [Header("won by:")]
+    public bool BecameTheDon;
+    public bool BecameImportant_toFamily;
+    [Header("lost by:")]
+    public bool byLackofFunds;
+    public bool refusedMole;
+    public bool bySentToPrison;
+    public bool byKickedOut;
+    [Header("Decision 1 flags,routes split with these")]
+    public bool BecameMole;
+    public bool TookDeal;
+    public bool JoinedFamily;
+    public bool refusedDeal;
+    public bool DidntJoinFamily;
     public bool Decision1Made;
-    //Decision 2 flags
+    [Header("Decision 2 flags")]
     public bool participateRaid;
     public bool raidFinished;
     public bool spawnPlace;
     public bool Decision2Made;
-    //Decision 3 flags
+    [Header("Decision 3 flags")]
     public bool assassinatedRDon;
     public bool Decision3Made;
-    //Decision 4 flags
+    [Header("Decision 4 flags")]
     public bool Decision4Made;
-    //Flags for spawning cards
+    [Header("Decision 5 Flags")]
+    public bool Decision5made;
+    [Header("Decision 6 Flags")]
+    public bool Decision6made;
+    [Header("Flags for spawning cards")]
     public bool OneTime;
-    public bool startingJobsDone, SpawnedDecision2,SpawnedDecision3,SpawnedDecision4;
-    //Stuff needed for Instantiation
+    public bool startingJobsDone;
+    public bool SpawnedDecision2;
+    public bool SpawnedDecision3;
+    public bool SpawnedDecision4;
+    public bool SpawnedDecision5;
+    public bool SpawnedDecision6;
+    [Header("Stuff needed for Instantiation")]
     public GameObject empty;
     public GameObject OpportunityCard;
     public Vector3 SpawnPont;
-    //floats for tracking progress
+    [Header("floats for tracking progress")]
     public float JobsDone, NoCurrency,AngryFamily;
     private void Awake()
     {

@@ -23,6 +23,7 @@ public class VerbTimer : MonoBehaviour
     public Button button;
     public Text buttonText;
     private VerbAction vAction;
+    private VerbInvestigate vInvest;
     private NarrativeController N_Control;
     private JoinedFamilyController jFam_Control;
     private MoleRouteController mRouteControl;
@@ -37,11 +38,8 @@ public class VerbTimer : MonoBehaviour
         cAgroFamControl = GameObject.Find("NarrativeController").GetComponent<AgressiveCustomFamily>();
         N_Control = GameObject.Find("NarrativeController").GetComponent<NarrativeController>();
         sSkills = GameObject.Find("Verb_Speak").GetComponent<SpeakSkills>();
-        if (gameObject.name == "Verb_Action")
-        {
-            vAction = GetComponent<VerbAction>();
-        }
-        else vAction = GameObject.Find("Verb_Action").GetComponent<VerbAction>();
+        vAction = GameObject.Find("Verb_Action").GetComponent<VerbAction>();
+        vInvest = GameObject.Find("Verb_Investigate").GetComponent<VerbInvestigate>();
         currentState = GameState.Start;
         startTime = timeLeft; 
     }
@@ -115,11 +113,19 @@ public class VerbTimer : MonoBehaviour
             {
                 vAction.inSlot1.GetComponent<Decision3Destroy>().removeFromList();
             }
-            if(vAction.inSlot1.gameObject.name == "Card_P_TheDocks(Clone)")
+            if(vInvest.inSlot1.gameObject.name == "Card_P_TheDocks(Clone)")
             {
-                vAction.inSlot1.GetComponent<PlaceDestruction>().removeFromLists();
+                vInvest.inSlot1.GetComponent<PlaceDestruction>().removeFromLists();
             }
-            if(gameObject.name == "Verb_Speak")
+            if(vInvest.inSlot1.gameObject.name == "Card_P_Headquarters(Clone)")
+            {
+                vInvest.inSlot1.GetComponent<PlaceDestruction>().removeFromLists();
+            }
+            if (vInvest.inSlot1.gameObject.name == "Card_P_Warehouse(Clone)")
+            {
+                vInvest.inSlot1.GetComponent<PlaceDestruction>().removeFromLists();
+            }
+            if (gameObject.name == "Verb_Speak")
             {
                 sSkills.setRandNum(1);
                 sSkills.setOneTime(1);

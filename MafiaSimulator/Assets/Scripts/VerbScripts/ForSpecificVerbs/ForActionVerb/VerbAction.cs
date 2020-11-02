@@ -32,7 +32,6 @@ public class VerbAction : MonoBehaviour
         {
             if (card.transform.position == verbAction.S1_Snap)
             {
-                rewardAmount = card.GetComponent<CardTimer>().cardAsset.CurrencyReward;
                 if (actionTimer.currentState == VerbTimer.GameState.Start)
                 {
                     actionTimer.timeLeft = inSlot1.GetComponent<CardTimer>().cardAsset.aTimer;
@@ -77,6 +76,8 @@ public class VerbAction : MonoBehaviour
                 inSlot4 = Empty;
             }
         }
+        //fetching && setting reward amount
+        rewardAmount = inSlot1.GetComponent<CardTimer>().cardAsset.CurrencyReward;
 ///locking  of the card into positon during any state but start state///
         if (actionTimer.currentState != VerbTimer.GameState.Start)
         {

@@ -440,15 +440,19 @@ MonoBehaviour:
   assassinatedRDon: 0
   Decision3Made: 0
   Decision4Made: 0
+  Decision5made: 0
+  Decision6made: 0
   OneTime: 0
   startingJobsDone: 0
   SpawnedDecision2: 0
   SpawnedDecision3: 0
   SpawnedDecision4: 0
+  SpawnedDecision5: 0
+  SpawnedDecision6: 0
   empty: {fileID: 3306935994679532818}
   OpportunityCard: {fileID: 0}
   SpawnPont: {x: 0, y: 0, z: 0}
-  JobsDone: 0
+  JobsDone: 2
   NoCurrency: 0
   AngryFamily: 0
 --- !u!114 &101617209
@@ -486,6 +490,8 @@ MonoBehaviour:
   - {fileID: 2414553453561476322, guid: 2f8b2f2e4bb6944898f45e2beb7b0aa5, type: 3}
   - {fileID: 1701082882956256349, guid: ceb570aa2ac3d4c18bcaadadb10f44d7, type: 3}
   - {fileID: 3740903468146961892, guid: 09a21b554f1e54d448ca3e78ca20e479, type: 3}
+  - {fileID: 4306795227437081559, guid: 41d69c95fafda4c5d9266a40b94c60de, type: 3}
+  - {fileID: 879954187768199261, guid: 7c46f7520901c4904920aac1c747e146, type: 3}
 --- !u!114 &101617210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6961,10 +6967,10 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854900297}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ee702de2d40194d368eb5c631133111e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4e78ea964c4e04bb48457d39d8ed0347, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.75
   m_Pitch: 1
@@ -7526,7 +7532,7 @@ MonoBehaviour:
   PersuasionSpawn: {x: 400, y: -200, z: 0}
   NumCurrency: 0
   aSource: {fileID: 1854900302}
-  bGround1: {fileID: 8300000, guid: ee702de2d40194d368eb5c631133111e, type: 3}
+  bGround1: {fileID: 8300000, guid: 4e78ea964c4e04bb48457d39d8ed0347, type: 3}
 --- !u!114 &1921719874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8970,21 +8976,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8262543123348875035, guid: 617d64099d7144c7a86d5a0fe94a0720,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8262543123348875035, guid: 617d64099d7144c7a86d5a0fe94a0720,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8262543123348875035, guid: 617d64099d7144c7a86d5a0fe94a0720,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8726623034904595247, guid: 617d64099d7144c7a86d5a0fe94a0720,
         type: 3}

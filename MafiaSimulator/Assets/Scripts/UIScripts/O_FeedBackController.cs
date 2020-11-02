@@ -143,7 +143,7 @@ public class O_FeedBackController : MonoBehaviour
         //for temp ends
         if (moleController.tempEnd == true || AgroCFamController.tempEnd == true || joinFamController.tempEnd == true)
         {
-
+            Explanation.text = "This is the  temporary end of the route. Please restart using the Options menu. Then choose a different class or make different decisions.";
         }
     }
     public void SetOneTime(int times)

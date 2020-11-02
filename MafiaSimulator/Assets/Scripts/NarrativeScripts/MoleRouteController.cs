@@ -31,6 +31,7 @@ public class MoleRouteController : MonoBehaviour
         {
             if(N_Control.StartingJob.wasAccountant == true)
             {
+                tempEnd = true;
                 OpportunityCard = cardList.cards[5].gameObject;
                 FBackControl.SetOneTime(1);
                 N_Control.startingJobsDone = true;
@@ -41,7 +42,8 @@ public class MoleRouteController : MonoBehaviour
         {
             if(N_Control.BecameMole == true)
             {
-                OpportunityCard = cardList.cards[9].gameObject;
+                
+                OpportunityCard = cardList.cards[22].gameObject;//investigate warehouse
                 FBackControl.SetOneTime(1);
                 N_Control.SpawnedDecision2 = true;
             }
@@ -54,12 +56,34 @@ public class MoleRouteController : MonoBehaviour
                 }
             }
         }
-        //temp End
+        //first blending with family decision, raid rival 
         if(N_Control.Decision2Made == true && N_Control.SpawnedDecision3 == false)
         {
-            tempEnd = true;
+            OpportunityCard = cardList.cards[8].gameObject;//raid rival
             FBackControl.SetOneTime(1);
             N_Control.SpawnedDecision3 = true;
+        }
+        //investigate the docks
+        if (N_Control.Decision3Made == true && N_Control.SpawnedDecision4 == false)
+        {
+            OpportunityCard = cardList.cards[9].gameObject;//investigate docks
+            FBackControl.SetOneTime(1);
+            N_Control.SpawnedDecision4 = true;
+        }
+        //2nd blending with family decision, assassinate rival head
+        if (N_Control.Decision4Made == true && N_Control.SpawnedDecision5 == false)
+        {
+            OpportunityCard = cardList.cards[12].gameObject;//Spawns AssassinateRDon Card
+            FBackControl.SetOneTime(1);
+            N_Control.SpawnedDecision5 = true;
+        }
+        //investigate headquarters, temp end
+        if(N_Control.Decision5made == true && N_Control.SpawnedDecision6 == false)
+        {
+            tempEnd = true;
+            //OpportunityCard = cardList.cards[23].gameObject;//investigate HeadQuarters
+            FBackControl.SetOneTime(1);
+            N_Control.SpawnedDecision6 = true;
         }
     }
     public void spawnO_Card(int times, GameObject card)

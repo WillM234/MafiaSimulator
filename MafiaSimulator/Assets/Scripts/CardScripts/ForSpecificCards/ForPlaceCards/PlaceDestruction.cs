@@ -6,13 +6,16 @@ public class PlaceDestruction : MonoBehaviour
 {
     private bool removed;
     private VerbAction vAction;
-    private VerbTimer aTimer;
+    private VerbInvestigate vInvest;
+    private VerbTimer aTimer, iTimer;
     private NarrativeController N_Control;
     private CardPositioning Tpasses, VerbA, VerbE, VerbI, VerbS;
     private void Awake()
     {
         aTimer = GameObject.Find("Verb_Action").GetComponent<VerbTimer>();
+        iTimer = GameObject.Find("Verb_Investigate").GetComponent<VerbTimer>();
         vAction = GameObject.Find("Verb_Action").GetComponent<VerbAction>();
+        vInvest = GameObject.Find("Verb_Investigate").GetComponent<VerbInvestigate>();
         N_Control = GameObject.Find("NarrativeController").GetComponent<NarrativeController>();
         Tpasses = GameObject.Find("TimePasses").GetComponent<CardPositioning>();
         VerbA = GameObject.Find("Verb_Action").GetComponent<CardPositioning>();
@@ -22,18 +25,14 @@ public class PlaceDestruction : MonoBehaviour
     }
     void Update()
     {
-        if(vAction.inSlot1 == gameObject && aTimer.timeLeft <= 0)
+        if(vInvest.inSlot1 == gameObject && iTimer.timeLeft <= 0 && iTimer.currentState == VerbTimer.GameState.ReadyToCollect)
         {
-            whichCard();
-            if(N_Control.raidFinished == true)
-            {
-                //removeFromLists();
-                if (removed)
-                {
-                    vAction.inSlot1 = vAction.Empty;
-                    Destroy(gameObject);
-                }
-            } 
+            whichCard();    
+        }
+        if (removed)
+        {
+            vInvest.inSlot1 = vInvest.Empty;
+            Destroy(gameObject);
         }
     }
     void whichCard()

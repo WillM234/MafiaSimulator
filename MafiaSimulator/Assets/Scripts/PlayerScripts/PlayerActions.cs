@@ -33,28 +33,28 @@ zPos = transform.position.z;
             PausePanel.SetActive(false);
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
-                transform.Translate(-1f, 0f, 0f);
+                transform.Translate(-2f, 0f, 0f);
             }//player moves left
             if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
-                transform.Translate(1f, 0f, 0f);
+                transform.Translate(2f, 0f, 0f);
             }//player moves right
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
-               transform.Translate(0f, 1f, 0f);
+               transform.Translate(0f, 2f, 0f);
             }//player moves up
             if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
-                transform.Translate(0f, -1f, 0f);
+                transform.Translate(0f, -2f, 0f);
             }//player moves down
             if(Input.GetKey(KeyCode.E))
             {
-                transform.Translate(0f, 0f, 1f);
-            }
+                transform.Translate(0f, 0f, 2f);
+            }//zoom in 
             if(Input.GetKey(KeyCode.Q))
             {
-                transform.Translate(0f, 0f, -1f);
-            }
+                transform.Translate(0f, 0f, -2f);
+            }//zoom out
         }//stuff that happens when game state is active
 
  /////player position limits////

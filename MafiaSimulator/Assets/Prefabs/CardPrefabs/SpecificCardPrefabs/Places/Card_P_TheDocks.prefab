@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39dbabc79eee3474685e199700e1955f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 120
+  timeLeft: 0
   currentTime: 0
   countDown: {fileID: 3231114797070352295}
   setTimer: 0
@@ -407,10 +407,10 @@ RectTransform:
   m_Children:
   - {fileID: 3012045774293727827}
   m_Father: {fileID: 3334049207617319258}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.35}
+  m_AnchorMax: {x: 1, y: 0.29700002}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -582,7 +582,7 @@ RectTransform:
   m_Children:
   - {fileID: 9048627744753905139}
   m_Father: {fileID: 3334049207617319258}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.071}
   m_AnchorMin: {x: 0, y: 0.268615}
   m_AnchorMax: {x: 1, y: 1}
@@ -616,8 +616,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2371125122758864997, guid: ae070a3e1820249d89a1ce45aeb96173,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f7e5dea4f8184560b77f554624c6bc4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -656,8 +655,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3334049207379463340}
   - {fileID: 3334049206740122711}
+  - {fileID: 3334049207379463340}
   m_Father: {fileID: 3334049206488892488}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
