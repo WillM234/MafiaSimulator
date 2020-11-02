@@ -77,7 +77,7 @@ public class VerbAction : MonoBehaviour
             }
         }
         //fetching && setting reward amount
-        rewardAmount = inSlot1.GetComponent<CardTimer>().cardAsset.CurrencyReward;
+        //rewardAmount = inSlot1.GetComponent<CardTimer>().cardAsset.CurrencyReward;
 ///locking  of the card into positon during any state but start state///
         if (actionTimer.currentState != VerbTimer.GameState.Start)
         {
@@ -93,15 +93,14 @@ public class VerbAction : MonoBehaviour
         if (actionTimer.timeLeft > 0)
         {
             OneTime = false;
-
         }
-        if (actionTimer.timeLeft <= 0 && actionTimer.currentState == VerbTimer.GameState.reSet)
+        /*if (actionTimer.timeLeft <= 0 && actionTimer.currentState == VerbTimer.GameState.reSet)
         {
             if (!OneTime)
             {
                 SpawnReward(rewardAmount);
             }
-        }
+        }*/
  ///if i used a while loop, Unity crashed///
         if (locked == true)
         {
