@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlaceDestruction : MonoBehaviour
 {
     private bool removed;
+    private MoleRouteController moleRoute;
     private VerbAction vAction;
     private VerbInvestigate vInvest;
     private VerbTimer aTimer, iTimer;
@@ -12,6 +13,7 @@ public class PlaceDestruction : MonoBehaviour
     private CardPositioning Tpasses, VerbA, VerbE, VerbI, VerbS;
     private void Awake()
     {
+        moleRoute = GameObject.Find("NarrativeController").GetComponent<MoleRouteController>();
         aTimer = GameObject.Find("Verb_Action").GetComponent<VerbTimer>();
         iTimer = GameObject.Find("Verb_Investigate").GetComponent<VerbTimer>();
         vAction = GameObject.Find("Verb_Action").GetComponent<VerbAction>();
@@ -39,7 +41,15 @@ public class PlaceDestruction : MonoBehaviour
     {
         if(this.gameObject.name == "Card_P_TheDocks(Clone)")
         {
-            N_Control.raidFinished = true;
+            N_Control.moleDecision4 = true;
+        }
+        if(this.gameObject.name == "Card_P_Warehouse(Clone)")
+        {
+            N_Control.moleDecision2 = true;
+        }
+        if(this.gameObject.name == "Card_P_Headquarters(Clone)")
+        {
+            N_Control.moleDecision6 = true;
         }
     }
     public void removeFromLists()

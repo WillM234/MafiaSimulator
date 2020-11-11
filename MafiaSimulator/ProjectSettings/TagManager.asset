@@ -10,6 +10,8 @@ TagManager:
   - Decision2
   - Decision3
   - Decision4
+  - MoleRoute
+  - AgressiveFam
   layers:
   - Default
   - TransparentFX

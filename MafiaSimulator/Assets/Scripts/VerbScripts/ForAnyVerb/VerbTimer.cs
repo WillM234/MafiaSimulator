@@ -113,6 +113,14 @@ public class VerbTimer : MonoBehaviour
             {
                 vAction.inSlot1.GetComponent<Decision3Destroy>().removeFromList();
             }
+            if(vAction.inSlot1.gameObject.tag == "AgressiveFam")
+            {
+                vAction.inSlot1.GetComponent<AFamDestruction>().removeFromList();
+            }
+            /*if(vAction.inSlot1.gameObject.tag == "")
+            {
+                vAction.inSlot1.GetComponent<MoleDestruction>().removeFromList();
+            }*/
             if(vInvest.inSlot1.gameObject.name == "Card_P_TheDocks(Clone)")
             {
                 vInvest.inSlot1.GetComponent<PlaceDestruction>().removeFromLists();

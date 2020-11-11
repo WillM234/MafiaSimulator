@@ -28,16 +28,28 @@ public class NarrativeController : MonoBehaviour
     public bool participateRaid;
     public bool raidFinished;
     public bool spawnPlace;
+    public bool moleDecision2;
+    public bool cFamDecision2;
     public bool Decision2Made;
     [Header("Decision 3 flags")]
     public bool assassinatedRDon;
+    public bool moleDecision3;
+    public bool cFamDecision3;
     public bool Decision3Made;
     [Header("Decision 4 flags")]
+    public bool moleDecision4;
+    public bool cFamDecision4;
     public bool Decision4Made;
     [Header("Decision 5 Flags")]
+    public bool moleDecision5;
+    public bool cFamDecision5;
     public bool Decision5made;
     [Header("Decision 6 Flags")]
+    public bool moleDecision6;
+    public bool cFamDecision6;
     public bool Decision6made;
+    [Header("Decision 7 flags")]
+    public bool cFamDecision7;
     [Header("Flags for spawning cards")]
     public bool OneTime;
     public bool startingJobsDone;
@@ -46,12 +58,15 @@ public class NarrativeController : MonoBehaviour
     public bool SpawnedDecision4;
     public bool SpawnedDecision5;
     public bool SpawnedDecision6;
+    public bool SpawnedDecision7;
     [Header("Stuff needed for Instantiation")]
     public GameObject empty;
-    public GameObject OpportunityCard;
+    public GameObject OpportunityCard;                                          
     public Vector3 SpawnPont;
     [Header("floats for tracking progress")]
-    public float JobsDone, NoCurrency,AngryFamily;
+    public float JobsDone;
+    public float NoCurrency;
+    public float AngryFamily;
     private void Awake()
     {
         OneTime = true;

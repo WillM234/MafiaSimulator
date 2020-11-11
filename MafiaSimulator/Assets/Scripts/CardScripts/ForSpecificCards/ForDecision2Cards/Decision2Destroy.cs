@@ -39,6 +39,10 @@ public class Decision2Destroy : MonoBehaviour
             N_Control.participateRaid = true;
             N_Control.raidFinished = true;
         }
+        if(N_Control.StartingJob.wasAccountant == true)
+        {
+            N_Control.moleDecision3 = true;
+        }
         N_Control.Decision2Made = true;
     }
     public void removeFromLists()

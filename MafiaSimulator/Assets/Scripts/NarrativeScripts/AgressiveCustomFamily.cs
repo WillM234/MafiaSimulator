@@ -40,7 +40,7 @@ public class AgressiveCustomFamily : MonoBehaviour
         {
             if(N_Control.DidntJoinFamily == true)
             {
-                OpportunityCard = cardList.cards[10].gameObject;
+                OpportunityCard = cardList.cards[10].gameObject;// spawns create a family
                 FBackControl.SetOneTime(1);
                 N_Control.SpawnedDecision2 = true;
             }
@@ -51,7 +51,36 @@ public class AgressiveCustomFamily : MonoBehaviour
                 N_Control.SpawnedDecision2 = true;
             }
         }
-    if(N_Control.DidntJoinFamily == true && N_Control.StartingJob.wasBouncer == true)
+       ///Family Specialization
+       if(N_Control.cFamDecision2 == true && N_Control.SpawnedDecision3 == false)
+         {
+            OpportunityCard = cardList.cards[24].gameObject;//Spawns Specialization Card, only agressiveness for now
+            FBackControl.SetOneTime(1);
+            N_Control.SpawnedDecision3 = true;
+         }
+       ///Enforcement of protection tax, Opportunity
+       if (N_Control.cFamDecision3 == true && N_Control.SpawnedDecision4 == false)
+         {
+            OpportunityCard = cardList.cards[25].gameObject;//opportnity to spawn
+            FBackControl.SetOneTime(1); //spawns opportunity card one time
+            N_Control.SpawnedDecision4 = true;//flags that the card was spawned
+         }
+       ///Drug deal protection
+       if (N_Control.cFamDecision4 == true && N_Control.SpawnedDecision5 == false)
+       {
+            OpportunityCard = cardList.cards[26].gameObject; //opportnity to spawn
+            FBackControl.SetOneTime(1); //spawns opportunity card one time
+            N_Control.SpawnedDecision5 = true;//flags that the card was spawned
+       }
+       ///Assassinate Rival enforcer 
+       if (N_Control.cFamDecision5 == true && N_Control.SpawnedDecision6 == false)
+        {
+            OpportunityCard = cardList.cards[27].gameObject; //opportnity to spawn
+            FBackControl.SetOneTime(1); //spawns opportunity card one time
+            N_Control.SpawnedDecision6 = true;//flags that the card was spawned
+        }
+       ///raid a rivial family
+       if(N_Control.cFamDecision6 == true && N_Control.SpawnedDecision7 == false)
         {
             tempEnd = true;
         }

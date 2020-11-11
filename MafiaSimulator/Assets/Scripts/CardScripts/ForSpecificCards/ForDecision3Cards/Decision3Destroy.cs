@@ -38,6 +38,10 @@ public class Decision3Destroy : MonoBehaviour
         {
             N_Control.assassinatedRDon = true;
         }
+        if(N_Control.StartingJob.wasAccountant == true)
+        {
+            N_Control.moleDecision5 = true;
+        }
         N_Control.Decision3Made = true;
     }
     public void removeFromList()

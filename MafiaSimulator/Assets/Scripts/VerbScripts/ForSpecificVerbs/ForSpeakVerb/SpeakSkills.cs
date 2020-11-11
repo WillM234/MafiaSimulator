@@ -92,7 +92,7 @@ public class SpeakSkills : MonoBehaviour
     }
     public void choseRandNum()
     {
-        randNum = Mathf.Round(Random.Range(1, 2));
+        randNum = Mathf.Round(Random.Range(1, 3));
         oneRand = true;
     }
     public void OnButtonPress()

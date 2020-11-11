@@ -140,6 +140,44 @@ public class O_FeedBackController : MonoBehaviour
                 }
             }
         }
+        //for mole opportunities
+        if(N_Control.moleDecision2 == true)
+        {
+            Explanation.text = "Time to blend with the family. I should participate in the upcoming raid.";
+        }
+        if(N_Control.moleDecision3 == true)
+        {
+            Explanation.text = "I should start my investigation for the police at The Docks.";
+        }
+        if (N_Control.moleDecision4 == true)
+        {
+            Explanation.text = "I should gain their trust more. The is a bounty on the head of a rival family. Maybe that would work.";
+        }
+        if (N_Control.moleDecision5 == true)
+        {
+            Explanation.text = "I am moving up. There should be some valuable info in the Headquarters. I should investigate there.";
+        }
+        /*if (N_Control.moleDecision6 == true)
+        {
+            Explanation.text = "";
+        }*/
+        //for agressive family opportunities
+        if(N_Control.cFamDecision2 == true)
+        {
+            Explanation.text = "I am putting together a family. Becoming agressive is a good idea(use with athletics).";
+        }
+        if (N_Control.cFamDecision3 == true)
+        {
+            Explanation.text = "We are growing stronger. To do so we must collect a protection tax from the surrounding businesses.";
+        }
+        if (N_Control.cFamDecision4 == true)
+        {
+            Explanation.text = "It is time to expand our workings. Providing protection during drug deals is a good start.";
+        }
+        if (N_Control.cFamDecision5 == true)
+        {
+            Explanation.text = "Time to up the ante. First we must take out a rival enforcer to expand.";
+        }
         //for temp ends
         if (moleController.tempEnd == true || AgroCFamController.tempEnd == true || joinFamController.tempEnd == true)
         {

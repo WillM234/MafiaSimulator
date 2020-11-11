@@ -18,6 +18,8 @@ public class SlotAreaController : MonoBehaviour
     public GameObject Slot2;
     public GameObject Slot3;
     public GameObject Slot4;
+    public AudioSource aSource;
+    public AudioClip buttonClick;
     public bool sAreaActive;
     public bool slot2Active;
     public bool slot3Active;
@@ -267,6 +269,7 @@ public class SlotAreaController : MonoBehaviour
     public void activateSlotArea()
     {
         sAreaActive = true;
+        aSource.PlayOneShot(buttonClick);
         
     }
     public void deactivateSlotArea()

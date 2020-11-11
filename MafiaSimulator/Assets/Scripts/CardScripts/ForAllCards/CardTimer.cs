@@ -120,25 +120,25 @@ private void Awake()
                         N_Control.BecameImportant_toFamily = true;
                         N_Control.Decision4Made = true;
                         }
-                    removeFromLists();
-                    if (removed)
-                    {
-                    Destroy(gameObject);
-                    }
-                }
-                if(cardAsset.Aspect_Place == true)
-                {
-                /*if(gameObject.name == "Card_P_TheDocks(Clone)")
-                    {
-                    N_Control.raidFinished = true;
-                    }*/
                 removeFromLists();
                 if (removed)
                 {
-                    Destroy(gameObject);
-                }  
+                Destroy(gameObject);
                 }
             }
+            /*if(cardAsset.Aspect_Place == true)
+            {
+            if(gameObject.name == "Card_P_TheDocks(Clone)")
+                {
+                N_Control.raidFinished = true;
+                }
+            removeFromLists();
+            if (removed)
+            {
+                Destroy(gameObject);
+            }  
+            }*/
+        }
     }
 ///coroutine for the timer///
     IEnumerator LoseTimer()
