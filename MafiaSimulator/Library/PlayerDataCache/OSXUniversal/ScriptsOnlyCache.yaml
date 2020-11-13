@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AFamDestruction
     - ActionOnSkills
     - AgressiveCustomFamily
     - AngryFamilyTracking
@@ -180,39 +181,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12492}
     - Class: 114
-      Script: {instanceID: 12684}
+      Script: {instanceID: 12610}
     - Class: 114
-      Script: {instanceID: 12704}
+      Script: {instanceID: 12686}
     - Class: 114
       Script: {instanceID: 12706}
     - Class: 114
-      Script: {instanceID: 12712}
+      Script: {instanceID: 12708}
     - Class: 114
-      Script: {instanceID: 12752}
+      Script: {instanceID: 12714}
     - Class: 114
-      Script: {instanceID: 12784}
+      Script: {instanceID: 12754}
     - Class: 114
-      Script: {instanceID: 12810}
+      Script: {instanceID: 12786}
     - Class: 114
-      Script: {instanceID: 12840}
+      Script: {instanceID: 12812}
     - Class: 114
-      Script: {instanceID: 12848}
+      Script: {instanceID: 12842}
     - Class: 114
-      Script: {instanceID: 12856}
+      Script: {instanceID: 12850}
     - Class: 114
-      Script: {instanceID: 12910}
+      Script: {instanceID: 12858}
     - Class: 114
-      Script: {instanceID: 12920}
+      Script: {instanceID: 12860}
     - Class: 114
-      Script: {instanceID: 12988}
+      Script: {instanceID: 12914}
     - Class: 114
-      Script: {instanceID: 13022}
+      Script: {instanceID: 12924}
     - Class: 114
-      Script: {instanceID: 13126}
+      Script: {instanceID: 12992}
     - Class: 114
-      Script: {instanceID: 13170}
+      Script: {instanceID: 13026}
     - Class: 114
-      Script: {instanceID: 17814}
+      Script: {instanceID: 13130}
+    - Class: 114
+      Script: {instanceID: 13176}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -552,7 +555,7 @@ ScriptsOnlyBuild:
     className: SpeakSkills
   - hash:
       serializedVersion: 2
-      Hash: 98c3212efd65de87c2397bd9b9f3fe04
+      Hash: 17665d34e506986458ee074504aaf0fc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SlotAreaController
@@ -738,6 +741,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 3cd69d784bbf75153705dd698468ecab
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AFamDestruction
+  - hash:
+      serializedVersion: 2
       Hash: 6939772cb3ce775a8e8d99f332534491
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -810,13 +819,19 @@ ScriptsOnlyBuild:
     className: CardAsset
   - hash:
       serializedVersion: 2
+      Hash: abdaca23c79a61dbfe0b249087d2c95e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CurrencySpawner
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: 80b3d0a561efd395c12b52b796a7e37d
+      Hash: c1c67f86de0c23f9cdc36056cbb39fe2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NarrativeController
@@ -912,6 +927,12 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
+      Hash: 3cd69d784bbf75153705dd698468ecab
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoleDestruction
+  - hash:
+      serializedVersion: 2
       Hash: a8487cc8c0947183ddb2bc3a9a282e5d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -934,13 +955,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: abdaca23c79a61dbfe0b249087d2c95e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CurrencySpawner
   platform: 2
   scenePathNames:
   - Assets/Scenes/Main_Game.unity
-  playerPath: /Users/williammcbride/Desktop/QU Fall 2020/GDD Game LB 5/MafiaSimBuilds/MidtermBuilds/MacOSXBuilds/MacTesting.01.app
+  playerPath: /Users/williammcbride/Desktop/QU Fall 2020/GDD Game LB 5/MafiaSimBuilds/11:11
+    Playtest3 Builds/MafiaSim11.11.20Playtest.app
