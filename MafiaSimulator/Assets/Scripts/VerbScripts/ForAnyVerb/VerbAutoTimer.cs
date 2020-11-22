@@ -52,9 +52,9 @@ public class VerbAutoTimer : MonoBehaviour
         {
             if (cList.Currency.Count > 0)
             {
-                cList.Currency[0].GetComponent<CurrencyDestruction>().RemoveFromLists();
+                cList.Currency[1].GetComponent<CurrencyDestruction>().RemoveFromLists();
             }
-            if(cList.Currency.Count <= 0)
+            if(cList.Currency.Count <= 1)
             {
                 N_Control.NoCurrency += 1;
             }

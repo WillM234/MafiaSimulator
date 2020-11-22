@@ -326,7 +326,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3050941181719320813
 RectTransform:
   m_ObjectHideFlags: 0
@@ -571,8 +571,8 @@ GameObject:
   - component: {fileID: 3050941182785896192}
   - component: {fileID: 4571268861667699755}
   - component: {fileID: -2400639897466447083}
-  - component: {fileID: 3398183666556615822}
   - component: {fileID: 8890813782158508826}
+  - component: {fileID: -6437985976907583009}
   m_Layer: 0
   m_Name: Card_i_Currency
   m_TagString: Card
@@ -661,20 +661,6 @@ MonoBehaviour:
   VerbInstestigate: {fileID: 0}
   T_Pass: {fileID: 0}
   Currency: {fileID: 0}
---- !u!114 &3398183666556615822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3050941182785896207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3338621aa03694b6995c2a6339ff6497, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inCurrencyList: 0
-  removed: 0
 --- !u!114 &8890813782158508826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,3 +690,18 @@ MonoBehaviour:
   sS3_Snap: 0
   sS4_Snap: 0
   in_tSnap: 0
+  empty: {fileID: 0}
+--- !u!114 &-6437985976907583009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3050941182785896207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3338621aa03694b6995c2a6339ff6497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inCurrencyList: 0
+  removed: 0
