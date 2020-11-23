@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class StartMenuController : MonoBehaviour
 {
     public Text ClassBackground, ClassBackground2;
+    public GameObject FarmerImage, AccountantImage, BodyguardImage;
     public Button TheFarmer, TheBouncer, TheAccountant, GameStart;
     public PlayerClass Farmer, Accountant, Bouncer;
     public GameObject Currency;
@@ -32,16 +33,25 @@ public class StartMenuController : MonoBehaviour
         }
         if(TheFarmer.interactable == false)
         {
+            FarmerImage.SetActive(true);
+            AccountantImage.SetActive(false);
+            BodyguardImage.SetActive(false);
             ClassBackground.text = "You are a farmer who has hit hard times. So you have turned to something more lucrative: running moonshine.";
             ClassBackground2.text = "Starting currency is 2. Your starting Athletics, Mobility, and Persuasion are 1.";
         }
         if(TheAccountant.interactable == false)
         {
+            FarmerImage.SetActive(false);
+            AccountantImage.SetActive(true);
+            BodyguardImage.SetActive(false);
             ClassBackground.text = "You are an Accountant who has broken into the money laundering buisness. I wonder how long you will survive.";
             ClassBackground2.text = "Starting currency is 4. Your starting Athletics, Mobility, and Persuasion are 1.";
         }
         if(TheBouncer.interactable == false)
         {
+            FarmerImage.SetActive(false);
+            AccountantImage.SetActive(false);
+            BodyguardImage.SetActive(true);
             ClassBackground.text = "You are a bouncer at a popular club. Someone has taken notice of your efforts. I wonder what they have planned for you.";
             ClassBackground2.text = "Starting currency is 3. Your starting Athletics, Mobility, and Persuasion are 1.";
         }

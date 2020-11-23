@@ -445,6 +445,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLeft: 0
   startTime: 0
+  aSource: {fileID: 6095183189829169336}
+  TimesUp: {fileID: 8300000, guid: 13a29cc462acc4e578e424361d78f1b3, type: 3}
   countDown: {fileID: 7394389632574238330}
   ButtonControl: {fileID: 0}
   currentState: 0

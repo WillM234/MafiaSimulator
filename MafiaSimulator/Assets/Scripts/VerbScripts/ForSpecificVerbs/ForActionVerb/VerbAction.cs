@@ -11,6 +11,8 @@ public class VerbAction : MonoBehaviour
     public GameObject CurrencyPrefab, Empty;
     public GameObject inSlot1, inSlot2, inSlot3, inSlot4, LastinSnap;
     public Vector3 SpawnPoint;
+    public AudioSource aSource;
+    public AudioClip moneySound;
     public int rewardAmount;
     public bool cardInPos, OneTime, locked;
     public void Awake()
@@ -113,7 +115,8 @@ public class VerbAction : MonoBehaviour
 ///used for spawing currency when job is done///
     public void SpawnReward(int amount)
     {
-        for(int i = 0; i < amount; i ++)
+        aSource.PlayOneShot(moneySound);
+        for (int i = 0; i < amount; i ++)
         {
             Instantiate(CurrencyPrefab, SpawnPoint, Quaternion.identity);
             OneTime = true;
