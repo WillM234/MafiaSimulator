@@ -93,6 +93,8 @@ GameObject:
   - component: {fileID: 364261110198869322}
   - component: {fileID: -390070925597271040}
   - component: {fileID: 1772050906355211768}
+  - component: {fileID: -4327339063260664328}
+  - component: {fileID: -5537353623332305110}
   m_Layer: 0
   m_Name: Card_i_Evidence
   m_TagString: Card
@@ -225,6 +227,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseIsOver: 0
   highlightObject: {fileID: 7300530776284247356}
+--- !u!114 &-4327339063260664328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100746401431744136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cda08c260374b2f8fed0eec7d1c941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayTime: 10
+--- !u!114 &-5537353623332305110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100746401431744136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cda08c260374b2f8fed0eec7d1c941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayTime: 0
 --- !u!1 &1100746401733655467
 GameObject:
   m_ObjectHideFlags: 0

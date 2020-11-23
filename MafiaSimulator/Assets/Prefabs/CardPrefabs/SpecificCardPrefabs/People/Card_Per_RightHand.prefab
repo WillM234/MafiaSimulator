@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2149285022108915615}
   - component: {fileID: 499482637120398390}
   - component: {fileID: 7046977385030616863}
+  - component: {fileID: -4576606980799319271}
   m_Layer: 0
   m_Name: Card_Per_RightHand
   m_TagString: Card
@@ -147,6 +148,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseIsOver: 0
   highlightObject: {fileID: 1727807402202478817}
+--- !u!114 &-4576606980799319271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701082882956256349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cda08c260374b2f8fed0eec7d1c941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayTime: 10
 --- !u!1 &1701082883258954110
 GameObject:
   m_ObjectHideFlags: 0

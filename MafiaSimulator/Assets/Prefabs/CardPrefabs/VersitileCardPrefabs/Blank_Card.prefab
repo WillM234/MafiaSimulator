@@ -571,6 +571,7 @@ GameObject:
   - component: {fileID: 7801917841541195376}
   - component: {fileID: 8608830146890143193}
   - component: {fileID: 3781343959687999014}
+  - component: {fileID: 6247955851434688013}
   m_Layer: 0
   m_Name: Blank_Card
   m_TagString: Card
@@ -703,6 +704,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseIsOver: 0
   highlightObject: {fileID: 538149560395849474}
+--- !u!114 &6247955851434688013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7353609054592964018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cda08c260374b2f8fed0eec7d1c941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayTime: 10
 --- !u!1 &7379296783574190562
 GameObject:
   m_ObjectHideFlags: 0

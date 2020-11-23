@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 2952678487345197396}
   - component: {fileID: 7255228264396435048}
   - component: {fileID: 8271893863284791748}
+  - component: {fileID: -5053888898208901909}
   m_Layer: 0
   m_Name: Card_O_RivalEnforcer
   m_TagString: AgressiveFam
@@ -719,6 +720,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseIsOver: 0
   highlightObject: {fileID: 1034480784211728319}
+--- !u!114 &-5053888898208901909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4147802483025408319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cda08c260374b2f8fed0eec7d1c941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayTime: 10
 --- !u!1 &4173208801420586351
 GameObject:
   m_ObjectHideFlags: 0

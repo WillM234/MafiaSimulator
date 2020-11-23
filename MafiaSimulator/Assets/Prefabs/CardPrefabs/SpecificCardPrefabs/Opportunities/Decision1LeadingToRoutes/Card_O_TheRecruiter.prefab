@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: -2103815431819329266}
   - component: {fileID: 7797181833892514984}
   - component: {fileID: -5527044651958495681}
+  - component: {fileID: 4428539670768043964}
   m_Layer: 0
   m_Name: Card_O_TheRecruiter
   m_TagString: Decision1
@@ -467,6 +468,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseIsOver: 0
   highlightObject: {fileID: 7757759309683363572}
+--- !u!114 &4428539670768043964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8889568837308506860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cda08c260374b2f8fed0eec7d1c941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayTime: 10
 --- !u!1 &8889568838061117394
 GameObject:
   m_ObjectHideFlags: 0

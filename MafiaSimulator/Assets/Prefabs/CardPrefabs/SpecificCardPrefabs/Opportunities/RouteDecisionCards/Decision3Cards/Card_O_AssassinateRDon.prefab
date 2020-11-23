@@ -419,6 +419,7 @@ GameObject:
   - component: {fileID: 843001641136763273}
   - component: {fileID: 8433660671294581025}
   - component: {fileID: 5915741810948438967}
+  - component: {fileID: -2688115668164290281}
   m_Layer: 0
   m_Name: Card_O_AssassinateRDon
   m_TagString: Decision3
@@ -564,6 +565,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseIsOver: 0
   highlightObject: {fileID: 7177503998270152305}
+--- !u!114 &-2688115668164290281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448164531439030939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cda08c260374b2f8fed0eec7d1c941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayTime: 10
 --- !u!1 &1476383383431745227
 GameObject:
   m_ObjectHideFlags: 0

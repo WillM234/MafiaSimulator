@@ -8,6 +8,8 @@ public class VerbTimer : MonoBehaviour
     [Header("Timer Stuff")]
     public float timeLeft;
     public float startTime;
+    public AudioSource aSource;
+    public AudioClip TimesUp;
     public Text countDown;
     public UIButtonControl ButtonControl;
     #endregion
@@ -77,6 +79,7 @@ public class VerbTimer : MonoBehaviour
     countDown.text = ("" + timeLeft);
     if(timeLeft < 0)
         {
+            aSource.PlayOneShot(TimesUp);
             currentState = GameState.ReadyToCollect;
             timeLeft = 0;
         }

@@ -419,6 +419,7 @@ GameObject:
   - component: {fileID: 6647392108348003137}
   - component: {fileID: -1590502467877955693}
   - component: {fileID: -3427751897976026012}
+  - component: {fileID: -462731678539794649}
   m_Layer: 0
   m_Name: Card_O_DrugDeal
   m_TagString: AgressiveFam
@@ -564,6 +565,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseIsOver: 0
   highlightObject: {fileID: 6506035903621122132}
+--- !u!114 &-462731678539794649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5563554083937375018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cda08c260374b2f8fed0eec7d1c941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayTime: 10
 --- !u!1 &5571082330380013434
 GameObject:
   m_ObjectHideFlags: 0

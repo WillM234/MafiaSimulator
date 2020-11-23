@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 3155485238545418016}
   - component: {fileID: 3528507102562284681}
   - component: {fileID: -5579441409614686648}
+  - component: {fileID: -8892940306492736162}
   m_Layer: 0
   m_Name: Card_Per_Informant
   m_TagString: Card
@@ -300,6 +301,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseIsOver: 0
   highlightObject: {fileID: 4166364297943714235}
+--- !u!114 &-8892940306492736162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2414553453561476322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cda08c260374b2f8fed0eec7d1c941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayTime: 10
 --- !u!1 &2414553454046173660
 GameObject:
   m_ObjectHideFlags: 0
