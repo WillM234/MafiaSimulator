@@ -742,6 +742,8 @@ MonoBehaviour:
   SpawnPoint: {x: -174, y: -143, z: 0}
   RewardAmount: 0
   OneTime: 0
+  aSource: {fileID: 4546040191938921587}
+  moneySound: {fileID: 8300000, guid: 20be113e1b1034186b653059ce299ad5, type: 3}
 --- !u!82 &4546040191938921587
 AudioSource:
   m_ObjectHideFlags: 0

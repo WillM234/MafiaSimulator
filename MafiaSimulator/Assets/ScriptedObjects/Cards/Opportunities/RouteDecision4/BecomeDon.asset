@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf1103dbd15f46ff90af1ef7c4e7989, type: 3}
   m_Name: BecomeDon
   m_EditorClassIdentifier: 
+  MobilityValue: 0
+  AthleticsValue: 0
+  PersuasionValue: 0
   Aspect_Action: 0
   Aspect_Ingredient: 0
   Aspect_Skill: 0
@@ -21,10 +24,18 @@ MonoBehaviour:
   is_Currency: 0
   CurrencyReward: 0
   aSlotsNeeded: 1
-  aTimer: 30
+  aTimer: 10
+  actionString: 
   eTimer: 0
   eSlotsNeeded: 0
+  exploreString: 
   iTimer: 0
   iSlotsNeeded: 0
+  investString: 
   sTimer: 0
   sSlotsNeeded: 0
+  speakString: 
+  OppString: 
+  mGoal: 0
+  aGoal: 0
+  pGoal: 0

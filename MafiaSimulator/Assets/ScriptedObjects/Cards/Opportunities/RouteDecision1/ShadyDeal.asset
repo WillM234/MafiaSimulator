@@ -24,7 +24,7 @@ MonoBehaviour:
   is_Currency: 0
   CurrencyReward: 0
   aSlotsNeeded: 1
-  aTimer: 30
+  aTimer: 10
   actionString: The deal seems good; but there are always consequences.
   eTimer: 0
   eSlotsNeeded: 1

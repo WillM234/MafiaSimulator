@@ -80,7 +80,7 @@ private void Awake()
         }
   ///other stuff being updated constantly///
         ///card text updates///
-        if (cardAsset.Aspect_Action == true || cardAsset.Aspect_Opportunity == true)
+        if (cardAsset.Aspect_Opportunity == true)
         {
             countDown.text = ("" + timeLeft);
         }
@@ -120,11 +120,14 @@ private void Awake()
                         N_Control.BecameImportant_toFamily = true;
                         N_Control.Decision4Made = true;
                         }
-                removeFromLists();
-                if (removed)
+                if(N_Control.Decision1Made == true || N_Control.Decision2Made == true || N_Control.Decision3Made == true || N_Control.Decision4Made)
                 {
-                Destroy(gameObject);
-                }
+                    removeFromLists();
+                    if (removed)
+                    {
+                        Destroy(gameObject);
+                    }
+                }  
             }
             /*if(cardAsset.Aspect_Place == true)
             {
@@ -146,7 +149,7 @@ private void Awake()
         while(true)
         {
             yield return new WaitForSeconds(1);
-            if (cardAsset.Aspect_Action == true || cardAsset.Aspect_Opportunity == true)
+            if (cardAsset.Aspect_Opportunity == true)
             {
                 if (currentState == GameState.ActiveState)
                 {

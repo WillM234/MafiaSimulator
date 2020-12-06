@@ -29,7 +29,7 @@ MonoBehaviour:
   eTimer: 0
   eSlotsNeeded: 0
   exploreString: 
-  iTimer: 90
+  iTimer: 10
   iSlotsNeeded: 4
   investString: 
   sTimer: 0

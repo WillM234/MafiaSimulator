@@ -11,6 +11,8 @@ public class CurrencySpawner : MonoBehaviour
     public Vector3 SpawnPoint;
     public int RewardAmount;
     public bool OneTime;
+    public AudioSource aSource;
+    public AudioClip moneySound;
     private void Awake()
     {
         vAction = GetComponent<VerbAction>();
@@ -29,13 +31,18 @@ public class CurrencySpawner : MonoBehaviour
     {
         if(aTimer.currentState == VerbTimer.GameState.reSet)
         {
-            OneTime = false;
+           if(RewardAmount > 0)
+            {
+                aSource.PlayOneShot(moneySound);
+            }    
+           OneTime = false;
         }
     }
     public void SpawnReward(int Amount)
     {
         for(int i = 0; i < Amount; i ++)
         {
+           
             Instantiate(cPrefab, SpawnPoint, Quaternion.identity);
             OneTime = true;
         }

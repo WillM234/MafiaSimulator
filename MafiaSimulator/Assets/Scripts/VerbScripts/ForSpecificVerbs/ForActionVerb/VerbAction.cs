@@ -115,7 +115,6 @@ public class VerbAction : MonoBehaviour
 ///used for spawing currency when job is done///
     public void SpawnReward(int amount)
     {
-        aSource.PlayOneShot(moneySound);
         for (int i = 0; i < amount; i ++)
         {
             Instantiate(CurrencyPrefab, SpawnPoint, Quaternion.identity);

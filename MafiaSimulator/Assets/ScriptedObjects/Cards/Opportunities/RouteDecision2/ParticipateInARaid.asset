@@ -24,13 +24,18 @@ MonoBehaviour:
   is_Currency: 0
   CurrencyReward: 0
   aSlotsNeeded: 4
-  aTimer: 120
+  aTimer: 10
+  actionString: 
   eTimer: 0
   eSlotsNeeded: 1
+  exploreString: 
   iTimer: 0
   iSlotsNeeded: 1
+  investString: 
   sTimer: 0
   sSlotsNeeded: 1
+  speakString: 
+  OppString: 
   mGoal: 0
   aGoal: 0
   pGoal: 0

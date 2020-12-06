@@ -43,6 +43,9 @@ public class CardsInSlots : MonoBehaviour
     #region other Things
     public GameObject empty;
     private Vector3 cardPos;
+    public AudioClip rightSlot;
+    public AudioClip wrongSlot;
+    public AudioSource aSource;
     #endregion
     private void Awake()
     {
@@ -70,6 +73,8 @@ public class CardsInSlots : MonoBehaviour
         //reference for card timer, used to change gamestate of the card
         cTimer = GetComponent<CardTimer>();
         cAsset = cTimer.cardAsset;
+        //reference for the audio source
+        aSource = GetComponent<AudioSource>();
         ///finding the gameObject for Empty
         empty = GameObject.Find("emptyCard");
         #endregion
@@ -262,6 +267,143 @@ public class CardsInSlots : MonoBehaviour
                 cTimer.currentState = CardTimer.GameState.ActiveState;
             }
             #endregion
+            #region checks slot flags, then plays Sound Effects
+            if (cAsset.Aspect_Action == true)
+            {
+                if (aS1_Snap == true)
+                {
+                    
+                    rightSlotSound(1);
+                }
+                else if (aS2_Snap == true || aS3_Snap == true || aS4_Snap == true)
+                {
+                    wrongSlotSound(1);
+                }
+                else if (iS1_Snap == true || iS2_Snap == true || iS3_Snap == true || iS4_Snap == true)
+                {
+                    wrongSlotSound(1);
+                }
+                else if (sS1_Snap == true || sS2_Snap == true || sS3_Snap == true || sS4_Snap == true)
+                {
+                    wrongSlotSound(1);
+                }
+                else if (in_tSnap == true)
+                {
+                    wrongSlotSound(1);
+                }
+            }
+            else if(cAsset.Aspect_Person == true)
+            {
+                if (aS2_Snap == true || aS3_Snap == true || aS4_Snap == true)
+                {
+                    rightSlotSound(1);
+                }
+                else if (iS2_Snap == true || iS3_Snap == true || iS4_Snap == true)
+                {
+                    rightSlotSound(1);
+                }
+                else if (sS1_Snap == true || sS2_Snap == true || sS3_Snap == true || sS4_Snap == true)
+                {
+                    wrongSlotSound(1);
+                }
+                else if (aS1_Snap == true || iS1_Snap == true || in_tSnap == true)
+                {
+                    wrongSlotSound(1);
+                }
+            }
+            else if(cAsset.Aspect_Skill == true)
+            {
+                if (sS1_Snap == true)
+                {
+                    rightSlotSound(1);
+                }
+                else if (aS1_Snap == true || aS2_Snap == true || aS3_Snap == true || aS4_Snap == true)
+                {
+                    rightSlotSound(1);
+                }
+                else if (iS2_Snap == true || iS3_Snap == true || iS4_Snap == true)
+                {
+                    rightSlotSound(1);
+                }
+                else if (in_tSnap == true || iS1_Snap == true || sS2_Snap == true || sS3_Snap == true || sS4_Snap == true)
+                {
+                    wrongSlotSound(1);
+                }
+            }
+            else if(cAsset.Aspect_Place == true)
+            {
+                if (iS1_Snap == true)
+                {
+                    rightSlotSound(1);
+                }
+                else if (iS2_Snap == true || iS3_Snap == true || iS4_Snap == true)
+                {
+                    wrongSlotSound(1);
+                }
+                else if (aS1_Snap == true || aS2_Snap == true || aS3_Snap == true || aS4_Snap == true)
+                {
+                    wrongSlotSound(1);
+                }
+                else if (in_tSnap == true || sS1_Snap == true || sS2_Snap == true || sS3_Snap == true || sS4_Snap == true)
+                {
+                    wrongSlotSound(1);
+                }
+            }
+            else if(cAsset.Aspect_Opportunity == true)
+            {
+                if (aS1_Snap == true)
+                {
+                    rightSlotSound(1);
+                }
+                else if (aS2_Snap == true || aS3_Snap == true || aS4_Snap == true)
+                {
+                    wrongSlotSound(1);
+                }
+                else if (iS1_Snap == true || iS2_Snap == true || iS3_Snap == true || iS4_Snap == true)
+                {
+                    wrongSlotSound(1);
+                }
+                else if (in_tSnap == true || sS1_Snap == true || sS2_Snap == true || sS3_Snap == true || sS4_Snap == true)
+                {
+                    wrongSlotSound(1);
+                }
+            }
+            else if(cAsset.Aspect_Ingredient == true)
+            {
+                if (in_tSnap == true)
+                {
+                    //rightSlotSound(1);
+                }
+                else if (sS1_Snap == true || sS2_Snap == true || sS3_Snap == true || sS4_Snap == true)
+                {
+                    wrongSlotSound(1);
+                }
+                else if (iS1_Snap == true || iS2_Snap == true || iS3_Snap == true || iS4_Snap == true)
+                {
+                    wrongSlotSound(1);
+                }
+                else if (aS1_Snap == true || aS2_Snap == true || aS3_Snap == true || aS4_Snap == true)
+                {
+                    wrongSlotSound(1);
+                }
+            }
+            #endregion
+        }
+        void rightSlotSound(int times)
+        {
+            for(int i = 0; i < times; i++)
+            {
+                //Debug.Log("Played Right Sound");
+                aSource.PlayOneShot(rightSlot);
+            }
+        }
+        void wrongSlotSound(int times)
+        {
+            for(int i = 0; i < times; i++)
+            {
+                //Debug.Log("Played Wrong Sound");
+                aSource.PlayOneShot(wrongSlot);
+            }
         }
     }
 }

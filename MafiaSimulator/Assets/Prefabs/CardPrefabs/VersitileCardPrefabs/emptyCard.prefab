@@ -538,6 +538,9 @@ MonoBehaviour:
   sS4_Snap: 0
   in_tSnap: 0
   empty: {fileID: 0}
+  rightSlot: {fileID: 0}
+  wrongSlot: {fileID: 0}
+  aSource: {fileID: 0}
 --- !u!114 &-1579859063088191862
 MonoBehaviour:
   m_ObjectHideFlags: 0

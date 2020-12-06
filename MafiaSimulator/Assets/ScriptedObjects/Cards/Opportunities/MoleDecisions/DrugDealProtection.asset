@@ -24,7 +24,7 @@ MonoBehaviour:
   is_Currency: 0
   CurrencyReward: 0
   aSlotsNeeded: 0
-  aTimer: 30
+  aTimer: 10
   actionString: 
   eTimer: 0
   eSlotsNeeded: 0

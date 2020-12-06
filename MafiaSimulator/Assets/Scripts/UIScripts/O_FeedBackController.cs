@@ -13,6 +13,8 @@ public class O_FeedBackController : MonoBehaviour
     private AngryFamilyTracking aFamTracking;
     public GameObject FeedbackPanel;
     public Text Explanation;
+    public GameObject restartButton;
+    public Button continueBUtton;
     public bool OneTime;
     private void Awake()
     {
@@ -177,7 +179,9 @@ public class O_FeedBackController : MonoBehaviour
         //for temp ends
         if (moleController.tempEnd == true || AgroCFamController.tempEnd == true || joinFamController.tempEnd == true)
         {
-            Explanation.text = "This is the  temporary end of the route. Please restart using the Options menu. Then choose a different class or make different decisions.";
+            restartButton.SetActive(true);
+            continueBUtton.enabled = false;
+            Explanation.text = "This is the  temporary end of the route. Please quit then reopen the Application. Then please choose a different class or make different decisions with the current one.";
         }
     }
     public void SetOneTime(int times)

@@ -24,7 +24,7 @@ MonoBehaviour:
   is_Currency: 0
   CurrencyReward: 0
   aSlotsNeeded: 1
-  aTimer: 30
+  aTimer: 10
   actionString: A limited window to agree. Different choices lead to different things.
   eTimer: 0
   eSlotsNeeded: 1

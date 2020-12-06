@@ -45,11 +45,16 @@ public class JoinedFamilyController : MonoBehaviour
         ///First major decision, Spawns second Opportunity, first in the actual route///
         if (N_Control.Decision1Made == true && N_Control.SpawnedDecision2 == false)
         {
-            if ((N_Control.TookDeal == true || N_Control.JoinedFamily == true) )
+            if ((N_Control.TookDeal == true || N_Control.JoinedFamily == true))
             {
                 OpportunityCard = cardList.cards[8].gameObject;//Spawns RaidRival card
                 FBackControl.SetOneTime(1);
                 N_Control.SpawnedDecision2 = true;
+            }
+            if (N_Control.refusedDeal == true)
+            {
+                tempEnd = true;
+                FBackControl.SetOneTime(1);
             }
         }
        /* ///Second opportunity, spawns The Docks for raid
