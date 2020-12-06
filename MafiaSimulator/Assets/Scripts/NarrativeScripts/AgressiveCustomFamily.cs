@@ -54,7 +54,8 @@ public class AgressiveCustomFamily : MonoBehaviour
        ///Family Specialization
        if(N_Control.cFamDecision2 == true && N_Control.SpawnedDecision3 == false)
          {
-            OpportunityCard = cardList.cards[24].gameObject;//Spawns Specialization Card, only agressiveness for now
+            tempEnd = true;
+            //OpportunityCard = cardList.cards[24].gameObject;//Spawns Specialization Card, only agressiveness for now
             FBackControl.SetOneTime(1);
             N_Control.SpawnedDecision3 = true;
          }

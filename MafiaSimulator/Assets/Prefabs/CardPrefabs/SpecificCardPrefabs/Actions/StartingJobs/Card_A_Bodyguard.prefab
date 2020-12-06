@@ -152,7 +152,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Job: Bodyguard'
+  m_Text: 'Job: Bouncer/Bodyguard'
 --- !u!1 &8186841934703085617
 GameObject:
   m_ObjectHideFlags: 0

@@ -101,6 +101,12 @@ private void Awake()
                         N_Control.DidntJoinFamily = true;
                         N_Control.Decision1Made = true;
                         }
+                    if(gameObject.name == "Card_O_BeAMole(Clone)")
+                        {
+                        N_Control.GameLost = true;
+                        N_Control.refusedMole = true;
+                         N_Control.Decision1Made = true;
+                        }
                     if(gameObject.name == "Card_O_ShadyDeal(Clone)")
                         {
                         N_Control.refusedDeal = true;
@@ -111,7 +117,27 @@ private void Awake()
                         N_Control.Decision2Made = true;
                         N_Control.raidFinished = true;
                         }
-                    if(gameObject.name == "Card_O_AssassinateRDon(Clone)")
+                    if(gameObject.name == "Card_O_CreateFamily(Clone)")
+                        {
+                         N_Control.cFamDecision2 = true;
+                        }
+                    if(gameObject.name == "Card_O_FamSpecialization(Clone)")
+                        {
+                         N_Control.cFamDecision3 = true;
+                         }
+                    if (gameObject.name == "Card_O_TaxEnforcement(Clone)")
+                        {
+                        N_Control.cFamDecision4 = true;
+                        }
+                    if (gameObject.name == "Card_O_DrugDeal(Clone)")
+                        {
+                        N_Control.cFamDecision5 = true;
+                        }
+                    if (gameObject.name == "Card_O_RivalEnforcer(Clone)")
+                        {
+                        N_Control.cFamDecision6 = true;
+                        }
+                if (gameObject.name == "Card_O_AssassinateRDon(Clone)")
                         {
                         N_Control.Decision3Made = true;
                         }
