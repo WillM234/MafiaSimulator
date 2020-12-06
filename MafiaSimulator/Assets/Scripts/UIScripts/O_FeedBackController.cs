@@ -157,10 +157,6 @@ public class O_FeedBackController : MonoBehaviour
         {
             Explanation.text = "I am moving up. There should be some valuable info in the Headquarters. I should investigate there.";
         }
-        /*if (N_Control.moleDecision6 == true)
-        {
-            Explanation.text = "";
-        }*/
         //for agressive family opportunities
         if(N_Control.cFamDecision2 == true)
         {

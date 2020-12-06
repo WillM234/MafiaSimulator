@@ -24,6 +24,7 @@ public class AngryFamilyTracking : MonoBehaviour
     }
     void AddToAFamily()
     {
+        N_Control.afamOnce = true;
         N_Control.AngryFamily += 1;
         OneTime = true;
     }

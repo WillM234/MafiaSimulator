@@ -532,26 +532,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Card: []
-  S1x_Min: 48
-  S1x_Max: 208
-  S1y_Min: 364
-  S1y_Max: 538
-  S1_Snap: {x: 109, y: 465, z: 1}
+  S1x_Min: 14
+  S1x_Max: 176
+  S1y_Min: -358
+  S1y_Max: -184
+  S1_Snap: {x: 94, y: -271, z: 1}
   S2x_Min: 272
   S2x_Max: 426
-  S2y_Min: 364
-  S2y_Max: 538
-  S2_Snap: {x: 330, y: 465, z: 1}
+  S2y_Min: -358
+  S2y_Max: -184
+  S2_Snap: {x: 316, y: -271, z: 1}
   S3x_Min: 502
   S3x_Max: 656
-  S3y_Min: 364
-  S3y_Max: 538
-  S3_Snap: {x: 560, y: 465, z: 1}
+  S3y_Min: -358
+  S3y_Max: -184
+  S3_Snap: {x: 548, y: -271, z: 1}
   S4x_Min: 722
   S4x_Max: 876
-  S4y_Min: 364
-  S4y_Max: 538
-  S4_Snap: {x: 780, y: 465, z: 1}
+  S4y_Min: -358
+  S4y_Max: -184
+  S4_Snap: {x: 770, y: -271, z: 1}
   X_min: -560
   X_max: -414
   Y_min: -30

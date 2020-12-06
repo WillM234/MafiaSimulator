@@ -10,6 +10,9 @@ public class FlavorTextDisplay : MonoBehaviour
     public Text cardName;
     public Text notUsedHere;
     public Text FlavorArea;
+    public Slider FlavorSlider;
+    public float DisplayTime;
+    public Text flavorTimeText;
     #endregion
     #region Timer Stuff
     public float timeLeft;
@@ -31,6 +34,10 @@ public class FlavorTextDisplay : MonoBehaviour
     }
     void Update()
     {
+        //the time that the falvor UI is displayed is equal to the value of the slider
+        DisplayTime = FlavorSlider.value;
+        //changes the text to match to equal the displayTime value in the options menu
+        flavorTimeText.text = ("Current card info display time: " + DisplayTime);
        if(playerA.currentState == PlayerActions.GameState.Active)
         {
             currentState = GameState.Active;
@@ -67,5 +74,10 @@ public class FlavorTextDisplay : MonoBehaviour
                 timeLeft -= 0;
             }
         }
+    }
+    public void closeDisplay()
+    {
+        timeLeft = 0;
+        active = false;
     }
 }

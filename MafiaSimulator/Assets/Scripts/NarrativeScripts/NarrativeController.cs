@@ -67,9 +67,17 @@ public class NarrativeController : MonoBehaviour
     public float JobsDone;
     public float NoCurrency;
     public float AngryFamily;
+    public bool afamOnce = true;
+    public bool debtOnce = true;
+    public GameObject debtWarningPanel;
+    public GameObject aFamWarningPanel;
+    public PlayerActions pActions;
     private void Awake()
     {
         OneTime = true;
+        afamOnce = true;
+        debtOnce = true;
+        pActions = GameObject.Find("MainCamera").GetComponent<PlayerActions>();
         listAllCards = GetComponent<ListOfCards>();
     }
     void Update()
@@ -86,7 +94,15 @@ public class NarrativeController : MonoBehaviour
             GameWon = true;
         }
     ///Game Lose conditions///
-         ///No currency game over///
+        ///No currency game over///
+        if(NoCurrency == 2 && debtOnce)
+        {
+            if (debtOnce)
+            {
+                openDebtWarning();
+ 
+            }
+        }
         if(NoCurrency >= 4)
         {
             byLackofFunds = true;
@@ -99,6 +115,15 @@ public class NarrativeController : MonoBehaviour
 
         }
         ///Kicked out of Family///
+        ///Warning for the family being angry
+        if(AngryFamily == 1 && afamOnce)
+        {
+            if(afamOnce)
+            {
+                openAFamWarning();
+            }
+        }
+        //actually being kicked out of the family
         if(AngryFamily >= 2)
         {
             byKickedOut = true;
@@ -121,5 +146,29 @@ public class NarrativeController : MonoBehaviour
         {
             OneTime = false;
         }
+    }
+    public void openDebtWarning()
+    {
+        debtWarningPanel.SetActive(true);
+        pActions.currentState = PlayerActions.GameState.Paused;
+        debtOnce = false;
+    }
+    public void openAFamWarning()
+    {
+        aFamWarningPanel.SetActive(true);
+        pActions.currentState = PlayerActions.GameState.Paused;
+        afamOnce = false;
+    }
+    public void closeDebtWarning()
+    {
+        debtWarningPanel.SetActive(false);
+        pActions.currentState = PlayerActions.GameState.Active;
+        
+    }
+    public void closeAFamWarning()
+    {
+        aFamWarningPanel.SetActive(false);
+        pActions.currentState = PlayerActions.GameState.Active;
+       
     }
 }

@@ -20,7 +20,7 @@ public class CardInfoUI : MonoBehaviour
         {
         //Displaying the actual panel 
             fTextDisplay.active = true;
-            fTextDisplay.timeLeft = displayTime;
+            fTextDisplay.timeLeft = fTextDisplay.DisplayTime;
             ///Starting Job cards
             //What happens for Bodyguard job
             if(thisCard.name == "Card_A_Bodyguard(Clone)")
