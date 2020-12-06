@@ -50,7 +50,7 @@ public class VerbAutoTimer : MonoBehaviour
         }
         if (currentState == GameState.resetState)
         {
-            if (cList.Currency.Count > 0)
+            if (cList.Currency.Count > 1)
             {
                 cList.Currency[1].GetComponent<CurrencyDestruction>().RemoveFromLists();
             }

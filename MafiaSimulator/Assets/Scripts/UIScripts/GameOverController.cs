@@ -19,7 +19,7 @@ public class GameOverController : MonoBehaviour
     void Update()
     {
         ///Teacking Currency for the player
-        CurrencyText.text = ( "" + cList.Currency.Count);
+        CurrencyText.text = ( "" + (cList.Currency.Count - 1));
      ///Activating GameOver/Done Panels///
         if(N_Control.GameLost == true)
         {
