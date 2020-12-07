@@ -256,8 +256,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    - Class: 328
-      Script: {instanceID: 0}
   scriptHashData:
   - hash:
       serializedVersion: 2
@@ -795,7 +793,7 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: cbec6b28c8111edccf192c334def3ab3
+      Hash: cae7345597c69728060490ba2d94ecf1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CardsInSlots
@@ -1066,4 +1064,4 @@ ScriptsOnlyBuild:
   platform: 2
   scenePathNames:
   - Assets/Scenes/Main_Game.unity
-  playerPath: /Users/williammcbride/Desktop/QU Fall 2020/GDD Game LB 5/MafiaSimBuilds/12:6:12Builds/VideoTakingBuild/VideoTakingBuild.app
+  playerPath: /Users/williammcbride/Desktop/QU Fall 2020/GDD 410/12:7:2020PlaytestBuilds/MafiaSim12.7.2020MacOsBuild.app

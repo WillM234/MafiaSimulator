@@ -14,6 +14,8 @@ public class CardsInSlots : MonoBehaviour
     private VerbInvestigate vInvest;
     private VerbSpeak vSpeak;
     private TimePasses T_Pass;
+    public int rightOneTime;
+    public int wrongOnetime;
     private SlotAreaController aSlot_Control,eSlot_Control,iSlot_Control,sSlot_Control;
     #endregion
     #region Positioning Flags
@@ -265,6 +267,8 @@ public class CardsInSlots : MonoBehaviour
             else
             {
                 cTimer.currentState = CardTimer.GameState.ActiveState;
+                rightOneTime = 0;
+                wrongOnetime = 0;
             }
             #endregion
             #region checks slot flags, then plays Sound Effects
@@ -393,16 +397,25 @@ public class CardsInSlots : MonoBehaviour
         {
             for(int i = 0; i < times; i++)
             {
-                //Debug.Log("Played Right Sound");
-                aSource.PlayOneShot(rightSlot);
+                if(rightOneTime == 0)
+                {
+                    //Debug.Log("Played Right Sound");
+                    aSource.PlayOneShot(rightSlot);
+                    rightOneTime += 1;
+                }
+                
             }
         }
         void wrongSlotSound(int times)
         {
             for(int i = 0; i < times; i++)
             {
-                //Debug.Log("Played Wrong Sound");
-                aSource.PlayOneShot(wrongSlot);
+                if(wrongOnetime == 0)
+                {
+                    //Debug.Log("Played Wrong Sound");
+                    aSource.PlayOneShot(wrongSlot);
+                    wrongOnetime += 1;
+                }   
             }
         }
     }

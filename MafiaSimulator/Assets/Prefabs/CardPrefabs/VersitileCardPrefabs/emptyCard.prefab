@@ -520,6 +520,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0571645aa996145429322b2235bf8871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rightOneTime: 0
+  wrongOnetime: 0
   aS1_Snap: 0
   aS2_Snap: 0
   aS3_Snap: 0
