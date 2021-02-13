@@ -6,7 +6,6 @@ public class SlotAreaController : MonoBehaviour
 {
     #region Script References
     private VerbAction vAction;
-    private VerbExplore vExplore;
     private VerbInvestigate vInvest;
     private VerbSpeak vSpeak;
     private TimePasses tPass;
@@ -30,22 +29,20 @@ public class SlotAreaController : MonoBehaviour
         #region Script references
         //references for scripts
         //references for lists scripts, used for checking/snapping to position
-        VerbA = GameObject.Find("Verb_Action").GetComponent<CardPositioning>();
-        VerbE = GameObject.Find("Verb_Explore").GetComponent<CardPositioning>();
-        VerbI = GameObject.Find("Verb_Investigate").GetComponent<CardPositioning>();
-        VerbS = GameObject.Find("Verb_Speak").GetComponent<CardPositioning>();
+        VerbA = GameObject.Find("ActionButton").GetComponent<CardPositioning>();
+        VerbI = GameObject.Find("InvestigateButton").GetComponent<CardPositioning>();
+        VerbS = GameObject.Find("SpeakButton").GetComponent<CardPositioning>();
         TPasses = GameObject.Find("TimePasses").GetComponent<CardPositioning>();
         //references to individual verb scripts
-        vAction = GameObject.Find("Verb_Action").GetComponent<VerbAction>();
-        vExplore = GameObject.Find("Verb_Explore").GetComponent<VerbExplore>();
-        vInvest = GameObject.Find("Verb_Investigate").GetComponent<VerbInvestigate>();
-        vSpeak = GameObject.Find("Verb_Speak").GetComponent<VerbSpeak>();
+        vAction = GameObject.Find("ActionButton").GetComponent<VerbAction>();
+        vInvest = GameObject.Find("InvestigateButton").GetComponent<VerbInvestigate>();
+        vSpeak = GameObject.Find("SpeakButton").GetComponent<VerbSpeak>();
         #endregion
     }
     void Update()
     {
     //stuff that happens only of this gameObject's name is Verb_Action
-        if (gameObject.name == "Verb_Action")
+        if (gameObject.name == "ActionButton")
         {
             foreach (GameObject card in VerbA.Card)
             {
@@ -75,39 +72,8 @@ public class SlotAreaController : MonoBehaviour
                 }
             }
         }
-    //stuff that happens only of this gameObject's name is Verb_Explore
-        if (gameObject.name == "Verb_Explore")
-        {
-            foreach (GameObject card in VerbE.Card)
-            {
-                if (vExplore.inSlot1 != vExplore.Empty)
-                {
-                    if (vExplore.inSlot1.GetComponent<CardTimer>().cardAsset.eSlotsNeeded == 2)
-                    {
-                        slot2Active = true;
-                    }
-                    if (vExplore.inSlot1.GetComponent<CardTimer>().cardAsset.eSlotsNeeded == 3)
-                    {
-                        slot2Active = true;
-                        slot3Active = true;
-                    }
-                    if (vExplore.inSlot1.GetComponent<CardTimer>().cardAsset.eSlotsNeeded == 4)
-                    {
-                        slot2Active = true;
-                        slot3Active = true;
-                        slot4Active = true;
-                    }
-                }
-                else
-                {
-                    slot2Active = false;
-                    slot3Active = false;
-                    slot4Active = false;
-                }
-            }
-        }
     //stuff that happens only of this gameObject's name is Verb_Investigate
-        if (gameObject.name == "Verb_Investigate")
+        if (gameObject.name == "InvestigateButton")
         {
             foreach (GameObject card in VerbI.Card)
             {
@@ -138,7 +104,7 @@ public class SlotAreaController : MonoBehaviour
             }
         }
     //stuff that happens only of this gameObject's name is Verb_Speak
-        if (gameObject.name == "Verb_Speak")
+        if (gameObject.name == "SpeakButton")
         {
             foreach(GameObject card in VerbS.Card)
             {
@@ -173,28 +139,21 @@ public class SlotAreaController : MonoBehaviour
     if(sAreaActive)
         {
             slotArea.SetActive(true);
-            if(gameObject.name == "Verb_Action")
+            if(gameObject.name == "ActionButton")
             {
                 vAction.inSlot1.SetActive(true);
                 vAction.inSlot2.SetActive(true);
                 vAction.inSlot3.SetActive(true);
                 vAction.inSlot4.SetActive(true);
             }
-            if(gameObject.name == "Verb_Explore")
-            {
-                vExplore.inSlot1.SetActive(true);
-                vExplore.inSlot2.SetActive(true);
-                vExplore.inSlot3.SetActive(true);
-                vExplore.inSlot4.SetActive(true);
-            }
-            if(gameObject.name == "Verb_Investigate")
+            if(gameObject.name == "InvestigateButton")
             {
                 vInvest.inSlot1.SetActive(true);
                 vInvest.inSlot2.SetActive(true);
                 vInvest.inSlot3.SetActive(true);
                 vInvest.inSlot4.SetActive(true);
             }
-            if(gameObject.name == "Verb_Speak")
+            if(gameObject.name == "SpeakButton")
             {
                 vSpeak.inSlot1.SetActive(true);
                 vSpeak.inSlot2.SetActive(true);
@@ -206,28 +165,21 @@ public class SlotAreaController : MonoBehaviour
     else if(!sAreaActive)
         {
             slotArea.SetActive(false);
-            if (gameObject.name == "Verb_Action")
+            if (gameObject.name == "ActionButton")
             {
                 vAction.inSlot1.SetActive(false);
                 vAction.inSlot2.SetActive(false);
                 vAction.inSlot3.SetActive(false);
                 vAction.inSlot4.SetActive(false);
             } 
-            if (gameObject.name == "Verb_Explore")
-            {
-                vExplore.inSlot1.SetActive(false);
-                vExplore.inSlot2.SetActive(false);
-                vExplore.inSlot3.SetActive(false);
-                vExplore.inSlot4.SetActive(false);
-            }
-            if (gameObject.name == "Verb_Investigate")
+            if (gameObject.name == "InvestigateButton")
             {
                 vInvest.inSlot1.SetActive(false);
                 vInvest.inSlot2.SetActive(false);
                 vInvest.inSlot3.SetActive(false);
                 vInvest.inSlot4.SetActive(false);
             }
-            if (gameObject.name == "Verb_Speak")
+            if (gameObject.name == "SpeakButton")
             {
                 vSpeak.inSlot1.SetActive(false);
                 vSpeak.inSlot2.SetActive(false);

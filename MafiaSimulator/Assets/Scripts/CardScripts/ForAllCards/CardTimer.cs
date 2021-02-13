@@ -25,9 +25,8 @@ public class CardTimer : MonoBehaviour
     private VerbAutoTimer AutoTimer;
     private CardToLists cardLists;
     private TimePasses T_Pass;
-    private CardPositioning VerbA, VerbE, VerbI, VerbS, TPasses;
+    private CardPositioning VerbA, VerbI, VerbS, TPasses;
     private VerbAction vAction;
-    private VerbExplore vExplore;
     private VerbInvestigate vInvestigate;
     private VerbSpeak vSpeak;
     private CurrencyList currentCurrency;
@@ -42,17 +41,15 @@ private void Awake()
         cardLists = GetComponent<CardToLists>();
         ///references for list scripts///
         currentCurrency = GameObject.Find("NarrativeController").GetComponent<CurrencyList>();
-        VerbA = GameObject.Find("Verb_Action").GetComponent<CardPositioning>();
-        VerbE = GameObject.Find("Verb_Explore").GetComponent<CardPositioning>();
-        VerbI = GameObject.Find("Verb_Investigate").GetComponent <CardPositioning>();
-        VerbS = GameObject.Find("Verb_Speak").GetComponent<CardPositioning>();
+        VerbA = GameObject.Find("ActionButton").GetComponent<CardPositioning>();
+        VerbI = GameObject.Find("InvestigateButton").GetComponent <CardPositioning>();
+        VerbS = GameObject.Find("SpeakButton").GetComponent<CardPositioning>();
         TPasses = GameObject.Find("TimePasses").GetComponent<CardPositioning>();
         ///references for each individual Verb Script///
         T_Pass = GameObject.Find("TimePasses").GetComponent<TimePasses>();
-        vAction = GameObject.Find("Verb_Action").GetComponent<VerbAction>();
-        vExplore = GameObject.Find("Verb_Explore").GetComponent<VerbExplore>();
-        vInvestigate = GameObject.Find("Verb_Investigate").GetComponent<VerbInvestigate>();
-        vSpeak = GameObject.Find("Verb_Speak").GetComponent<VerbSpeak>();
+        vAction = GameObject.Find("ActionButton").GetComponent<VerbAction>();
+        vInvestigate = GameObject.Find("InvestigateButton").GetComponent<VerbInvestigate>();
+        vSpeak = GameObject.Find("SpeakButton").GetComponent<VerbSpeak>();
         ///setting state to Active on wake, mainly for instaniations///
         currentState = GameState.ActiveState;
         if (T_Pass.cardInSnap == false && cardAsset.is_Currency == true)
@@ -155,18 +152,6 @@ private void Awake()
                     }
                 }  
             }
-            /*if(cardAsset.Aspect_Place == true)
-            {
-            if(gameObject.name == "Card_P_TheDocks(Clone)")
-                {
-                N_Control.raidFinished = true;
-                }
-            removeFromLists();
-            if (removed)
-            {
-                Destroy(gameObject);
-            }  
-            }*/
         }
     }
 ///coroutine for the timer///
@@ -205,7 +190,6 @@ void removeFromLists()
         currentCurrency.Currency.Remove(gameObject);
         TPasses.Card.Remove(gameObject);
         VerbA.Card.Remove(gameObject);
-        VerbE.Card.Remove(gameObject);
         VerbI.Card.Remove(gameObject);
         VerbS.Card.Remove(gameObject);
         removed = true;

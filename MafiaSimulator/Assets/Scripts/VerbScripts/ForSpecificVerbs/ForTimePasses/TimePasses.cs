@@ -7,16 +7,15 @@ public class TimePasses : MonoBehaviour
     public GameObject lastInSnap, Empty;
     private CardTimer c_Timer;
     private VerbAutoTimer AutoTimer;
-    private CardPositioning timePasses, VerbA, VerbE, VerbI, VerbS;
+    private CardPositioning timePasses, VerbA, VerbI, VerbS;
     private CurrencyList currentCurrency;
     public bool cardInSnap, Destroyed;
     private void Awake()
     {
         timePasses = GetComponent<CardPositioning>();
-        VerbA = GameObject.Find("Verb_Action").GetComponent<CardPositioning>();
-        VerbE = GameObject.Find("Verb_Explore").GetComponent<CardPositioning>();
-        VerbI = GameObject.Find("Verb_Investigate").GetComponent<CardPositioning>();
-        VerbS = GameObject.Find("Verb_Speak").GetComponent<CardPositioning>();
+        VerbA = GameObject.Find("ActionButton").GetComponent<CardPositioning>();
+        VerbI = GameObject.Find("InvestigateButton").GetComponent<CardPositioning>();
+        VerbS = GameObject.Find("SpeakButton").GetComponent<CardPositioning>();
         AutoTimer = GetComponent<VerbAutoTimer>();
         currentCurrency = GameObject.Find("NarrativeController").GetComponent<CurrencyList>();
     }

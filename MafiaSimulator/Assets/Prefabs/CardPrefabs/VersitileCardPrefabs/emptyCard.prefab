@@ -503,7 +503,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimePasses: {fileID: 0}
   VerbAction: {fileID: 0}
-  VerbExplore: {fileID: 0}
   VerbSpeak: {fileID: 0}
   VerbInstestigate: {fileID: 0}
   T_Pass: {fileID: 0}
@@ -526,10 +525,6 @@ MonoBehaviour:
   aS2_Snap: 0
   aS3_Snap: 0
   aS4_Snap: 0
-  eS1_Snap: 0
-  eS2_Snap: 0
-  eS3_Snap: 0
-  eS4_Snap: 0
   iS1_Snap: 0
   iS2_Snap: 0
   iS3_Snap: 0

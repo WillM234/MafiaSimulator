@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class VerbAutoTimer : MonoBehaviour
 {
     #region Timer Stuff
     public float timeLeft;
     private float startTime;
-    public Text countDown;
+    public TMP_Text countDown;
     public UIButtonControl ButtonControl;
     private CurrencyList cList;
     private NarrativeController N_Control;
@@ -43,7 +44,7 @@ public class VerbAutoTimer : MonoBehaviour
             currentState = GameState.ActiveState;
         }
         ///other stuff being tracked constantly///
-        countDown.text = ("" + timeLeft);
+        countDown.text = ("Debt due in: " + timeLeft);
         if (timeLeft < 0)
         {
             currentState = GameState.resetState;
