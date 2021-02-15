@@ -1064,4 +1064,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main_Game.unity
-  playerPath: /Users/williammcbride/Desktop/QU Fall 2020/GDD 410/12:7:2020PlaytestBuilds/MafiaSim12.7.2020WindowsBuild/Multi_Tasking_Project.exe
+  playerPath: /Users/williammcbride/Desktop/QU Fall 2020/GDD 411/WindowsBuild2.09.2021/MafiaSimRevisePolish.WindowsBuild.01/Multi_Tasking_Project.exe

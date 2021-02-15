@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class VerbTimer : MonoBehaviour
 {
     #region Timer Stuff
@@ -10,7 +11,8 @@ public class VerbTimer : MonoBehaviour
     public float startTime;
     public AudioSource aSource;
     public AudioClip TimesUp;
-    public Text countDown;
+    //public Text countDown;
+    public TMP_Text countDown;
     public UIButtonControl ButtonControl;
     #endregion
     #region GameState Stuff
@@ -23,7 +25,7 @@ public class VerbTimer : MonoBehaviour
     #region Collection Stuff
     [Header("collection Stuff")]
     public Button button;
-    public Text buttonText;
+    public TMP_Text buttonText;
     private VerbAction vAction;
     private VerbInvestigate vInvest;
     private NarrativeController N_Control;
@@ -39,9 +41,9 @@ public class VerbTimer : MonoBehaviour
         mRouteControl = GameObject.Find("NarrativeController").GetComponent<MoleRouteController>();
         cAgroFamControl = GameObject.Find("NarrativeController").GetComponent<AgressiveCustomFamily>();
         N_Control = GameObject.Find("NarrativeController").GetComponent<NarrativeController>();
-        sSkills = GameObject.Find("Verb_Speak").GetComponent<SpeakSkills>();
-        vAction = GameObject.Find("Verb_Action").GetComponent<VerbAction>();
-        vInvest = GameObject.Find("Verb_Investigate").GetComponent<VerbInvestigate>();
+        sSkills = GameObject.Find("SpeakButton").GetComponent<SpeakSkills>();
+        vAction = GameObject.Find("ActionButton").GetComponent<VerbAction>();
+        vInvest = GameObject.Find("InvestigateButton").GetComponent<VerbInvestigate>();
         currentState = GameState.Start;
         startTime = timeLeft; 
     }
@@ -136,7 +138,7 @@ public class VerbTimer : MonoBehaviour
             {
                 vInvest.inSlot1.GetComponent<PlaceDestruction>().removeFromLists();
             }
-            if (gameObject.name == "Verb_Speak")
+            if (gameObject.name == "SpeakButton")
             {
                 sSkills.setRandNum(1);
                 sSkills.setOneTime(1);

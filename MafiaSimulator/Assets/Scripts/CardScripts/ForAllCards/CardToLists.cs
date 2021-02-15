@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CardToLists : MonoBehaviour
 {
-    public CardPositioning TimePasses, VerbAction, VerbExplore, VerbSpeak, VerbInstestigate;
+    public CardPositioning TimePasses, VerbAction, VerbSpeak, VerbInstestigate;
     public TimePasses T_Pass;
     public CurrencyList Currency;
     private CardAsset cardAsset;
@@ -13,17 +13,15 @@ public class CardToLists : MonoBehaviour
         ///reference scripts, grabbing them through code instead of through inspector///
         T_Pass = GameObject.Find("TimePasses").GetComponent<TimePasses>();
         TimePasses = GameObject.Find("TimePasses").GetComponent<CardPositioning>();
-        VerbAction = GameObject.Find("Verb_Action").GetComponent<CardPositioning>();
-        VerbExplore = GameObject.Find("Verb_Explore").GetComponent<CardPositioning>();
-        VerbSpeak = GameObject.Find("Verb_Speak").GetComponent<CardPositioning>();
-        VerbInstestigate = GameObject.Find("Verb_Investigate").GetComponent<CardPositioning>();
+        VerbAction = GameObject.Find("ActionButton").GetComponent<CardPositioning>();
+        VerbSpeak = GameObject.Find("SpeakButton").GetComponent<CardPositioning>();
+        VerbInstestigate = GameObject.Find("InvestigateButton").GetComponent<CardPositioning>();
         Currency = GameObject.Find("NarrativeController").GetComponent<CurrencyList>();
         cardAsset = this.gameObject.GetComponent<CardTimer>().cardAsset;
         ///Adding the card to the lists so they can be tracked///
         ///These Lists track all the cards
         TimePasses.Card.Add(gameObject);
         VerbAction.Card.Add(gameObject);
-        VerbExplore.Card.Add(gameObject);
         VerbSpeak.Card.Add(gameObject);
         VerbInstestigate.Card.Add(gameObject);
         //These Lists are for specific things

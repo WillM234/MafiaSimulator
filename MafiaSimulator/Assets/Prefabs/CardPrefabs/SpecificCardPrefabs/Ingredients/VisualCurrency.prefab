@@ -458,9 +458,9 @@ GameObject:
   - component: {fileID: 7111242014585564643}
   - component: {fileID: 5151421242294793708}
   - component: {fileID: -8447197676686487746}
-  - component: {fileID: 3383478044801099348}
   - component: {fileID: -146950338619058720}
   - component: {fileID: -457318218412850552}
+  - component: {fileID: 5153782012583528502}
   m_Layer: 0
   m_Name: VisualCurrency
   m_TagString: Card
@@ -544,7 +544,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimePasses: {fileID: 0}
   VerbAction: {fileID: 0}
-  VerbExplore: {fileID: 0}
   VerbSpeak: {fileID: 0}
   VerbInstestigate: {fileID: 0}
   T_Pass: {fileID: 0}
@@ -567,10 +566,6 @@ MonoBehaviour:
   aS2_Snap: 0
   aS3_Snap: 0
   aS4_Snap: 0
-  eS1_Snap: 0
-  eS2_Snap: 0
-  eS3_Snap: 0
-  eS4_Snap: 0
   iS1_Snap: 0
   iS2_Snap: 0
   iS3_Snap: 0
@@ -598,19 +593,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseIsOver: 0
   highlightObject: {fileID: 8514664892074330784}
---- !u!114 &3383478044801099348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1605564617269266937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76cda08c260374b2f8fed0eec7d1c941, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayTime: 10
 --- !u!114 &-146950338619058720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,6 +702,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5153782012583528502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605564617269266937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3338621aa03694b6995c2a6339ff6497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inCurrencyList: 0
+  removed: 0
 --- !u!1 &1605564617574718682
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class JoinedFamilyController : MonoBehaviour
     private void Awake()
     {
         FBackControl = GameObject.Find("MainCamera").GetComponent<O_FeedBackController>();
-        aTimer = GameObject.Find("Verb_Action").GetComponent<VerbTimer>();
+        aTimer = GameObject.Find("ActionButton").GetComponent<VerbTimer>();
         N_Control = GetComponent<NarrativeController>();
         cardList = GetComponent<ListOfCards>();
         OneTime = true;

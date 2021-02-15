@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class sSlotTextController : MonoBehaviour
 {
     #region referenced scripts
     private VerbSpeak vSpeak;
     #endregion
-    public Text infoText;
+    public TMP_Text infoText;
     private void Awake()
     {
         vSpeak = GetComponent<VerbSpeak>();

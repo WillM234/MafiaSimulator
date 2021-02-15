@@ -32,43 +32,7 @@ public class VerbExplore : MonoBehaviour
                     exploreTimer.startTime = exploreTimer.timeLeft;
                 }
             }
-            ///tracking whichever card is in the slot
-            ///Tracking card that is in slot 1
-            if (card.GetComponent<CardsInSlots>().eS1_Snap == true)
-            {
-                inSlot1 = card.gameObject;
-            }
-            if (inSlot1.GetComponent<CardsInSlots>().eS1_Snap == false)
-            {
-                inSlot1 = Empty;
-            }
-            ///Tracking card that is in slot 2
-            if (card.GetComponent<CardsInSlots>().eS2_Snap == true)
-            {
-                inSlot2 = card.gameObject;
-            }
-            if (inSlot1.GetComponent<CardsInSlots>().eS2_Snap == false)
-            {
-                inSlot2 = Empty;
-            }
-            ///Tracking card that is in slot 3
-            if (card.GetComponent<CardsInSlots>().eS3_Snap == true)
-            {
-                inSlot3 = card.gameObject;
-            }
-            if (inSlot3.GetComponent<CardsInSlots>().eS3_Snap == false)
-            {
-                inSlot3 = Empty;
-            }
-            ///Tracking card that is in slot 4
-            if (card.GetComponent<CardsInSlots>().eS4_Snap == true)
-            {
-                inSlot4 = card.gameObject;
-            }
-            if (inSlot4.GetComponent<CardsInSlots>().eS4_Snap == false)
-            {
-                inSlot4 = Empty;
-            }
+            
         }
    ///locking  of the card into positon during any state but start state///
         if(exploreTimer.currentState != VerbTimer.GameState.Start)

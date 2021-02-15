@@ -24,7 +24,7 @@ public class O_FeedBackController : MonoBehaviour
         AgroCFamController = GameObject.Find("NarrativeController").GetComponent<AgressiveCustomFamily>();
         aFamTracking = GameObject.Find("NarrativeController").GetComponent<AngryFamilyTracking>();
         pActions = GetComponent<PlayerActions>();
-        aOnSkills = GameObject.Find("Verb_Action").GetComponent<ActionOnSkills>();
+        aOnSkills = GameObject.Find("ActionButton").GetComponent<ActionOnSkills>();
         OneTime = true;
     }
     void Update()

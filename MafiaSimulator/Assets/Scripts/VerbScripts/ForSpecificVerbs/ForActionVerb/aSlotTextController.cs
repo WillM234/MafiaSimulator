@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class aSlotTextController : MonoBehaviour
 {
     #region referenced scripts
@@ -9,7 +10,7 @@ public class aSlotTextController : MonoBehaviour
     private ActionOnSkills aOnSkills;
     #endregion
     #region Text stuff
-    public Text infoText;
+    public TMP_Text infoText;
     #endregion
     private void Awake()
     {

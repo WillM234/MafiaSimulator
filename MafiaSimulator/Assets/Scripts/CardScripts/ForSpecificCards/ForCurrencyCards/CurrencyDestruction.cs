@@ -17,10 +17,9 @@ public class CurrencyDestruction : MonoBehaviour
         AutoTimer = GameObject.Find("TimePasses").GetComponent<VerbAutoTimer>();
         timePasses = GameObject.Find("TimePasses").GetComponent<TimePasses>();
         TPasses = GameObject.Find("TimePasses").GetComponent<CardPositioning>();
-        VerbA = GameObject.Find("Verb_Action").GetComponent<CardPositioning>();
-        VerbE = GameObject.Find("Verb_Explore").GetComponent<CardPositioning>();
-        VerbI  = GameObject.Find("Verb_Investigate").GetComponent<CardPositioning>();
-        VerbS  = GameObject.Find("Verb_Speak").GetComponent<CardPositioning>();
+        VerbA = GameObject.Find("ActionButton").GetComponent<CardPositioning>();
+        VerbI  = GameObject.Find("InvestigateButton").GetComponent<CardPositioning>();
+        VerbS  = GameObject.Find("SpeakButton").GetComponent<CardPositioning>();
         cList = GameObject.Find("NarrativeController").GetComponent<CurrencyList>();
     }
     private void Update()

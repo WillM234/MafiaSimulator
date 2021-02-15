@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class iSlotTextController : MonoBehaviour
 {
     #region referenced scripts
     private VerbInvestigate vInvest;
     #endregion
-    public Text infoText;
+    public TMP_Text infoText;
     private void Awake()
     {
         vInvest = GetComponent<VerbInvestigate>();

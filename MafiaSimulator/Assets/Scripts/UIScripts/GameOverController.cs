@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 public class GameOverController : MonoBehaviour
 {
     private NarrativeController N_Control;
     private CurrencyList cList; 
     private PlayerActions pActions;
     public GameObject WinPanel, LosePanel;
-    public Text WinReason, LoseReason, CurrencyText;
+    public Text WinReason, LoseReason;
+    public TMP_Text CurrencyText;
     private void Awake()
     {
         N_Control = GameObject.Find("NarrativeController").GetComponent<NarrativeController>();
@@ -19,7 +21,7 @@ public class GameOverController : MonoBehaviour
     void Update()
     {
         ///Teacking Currency for the player
-        CurrencyText.text = ( "" + (cList.Currency.Count - 1));
+        CurrencyText.text = ( "Current Currency: " + (cList.Currency.Count - 1));
      ///Activating GameOver/Done Panels///
         if(N_Control.GameLost == true)
         {
