@@ -50,12 +50,10 @@ ScriptsOnlyBuild:
     - UIButtonControl
     - VerbAction
     - VerbAutoTimer
-    - VerbExplore
     - VerbInvestigate
     - VerbSpeak
     - VerbTimer
     - aSlotTextController
-    - eSlotTextController
     - iSlotTextController
     - sSlotTextController
     Unity.Rider.Editor.dll:
@@ -139,8 +137,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11642}
     - Class: 114
-      Script: {instanceID: 11654}
-    - Class: 114
       Script: {instanceID: 11672}
     - Class: 114
       Script: {instanceID: 11678}
@@ -210,8 +206,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12958}
     - Class: 114
       Script: {instanceID: 12960}
-    - Class: 114
-      Script: {instanceID: 12966}
     - Class: 114
       Script: {instanceID: 13034}
     - Class: 114
@@ -361,7 +355,7 @@ ScriptsOnlyBuild:
     className: Scrollbar
   - hash:
       serializedVersion: 2
-      Hash: 1597bb066ff56feb41eea36bb0f872a5
+      Hash: e3c895cc6a3376e82e79f3b23681555d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: iSlotTextController
@@ -475,7 +469,7 @@ ScriptsOnlyBuild:
     className: StudioGlobalParameterTrigger
   - hash:
       serializedVersion: 2
-      Hash: fec6287fa46b04ab348c88be914353c4
+      Hash: 4c8c30989de25b8034ba418545245a9f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameOverController
@@ -625,7 +619,7 @@ ScriptsOnlyBuild:
     className: SlotAreaController
   - hash:
       serializedVersion: 2
-      Hash: 57aecdaf6b89d5a989a72fd7b4231228
+      Hash: 0bdecd76a12a18142495f88578eb50c4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CardToLists
@@ -691,7 +685,7 @@ ScriptsOnlyBuild:
     className: CurrencyList
   - hash:
       serializedVersion: 2
-      Hash: 85df45ba3d0d4cbefd3215dabd8931b1
+      Hash: d846379b8ba7829528319e70c464bea3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: VerbAutoTimer
@@ -703,7 +697,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 6c5ef623255856894f5112780d9f8b02
+      Hash: 4fcae6b760f9b501995d2fa6c5727a8e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: VerbTimer
@@ -727,7 +721,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 1597bb066ff56feb41eea36bb0f872a5
+      Hash: e3c895cc6a3376e82e79f3b23681555d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: aSlotTextController
@@ -793,7 +787,7 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: cae7345597c69728060490ba2d94ecf1
+      Hash: 71fd649378822427f27dc1aa41206737
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CardsInSlots
@@ -835,7 +829,7 @@ ScriptsOnlyBuild:
     className: AngryFamilyTracking
   - hash:
       serializedVersion: 2
-      Hash: 1597bb066ff56feb41eea36bb0f872a5
+      Hash: e3c895cc6a3376e82e79f3b23681555d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: sSlotTextController
@@ -1064,4 +1058,4 @@ ScriptsOnlyBuild:
   platform: 2
   scenePathNames:
   - Assets/Scenes/Main_Game.unity
-  playerPath: /Users/williammcbride/Desktop/QU Fall 2020/GDD 411/MAcBuild2.09.2021/MafiaSimRevisePolish.MacOsBuild.01.app
+  playerPath: /Users/williammcbride/Desktop/QU Fall 2020/GDD 411/Revise&PolishFinal/MafiaSimR&PFinal2.15.v0.01.app
