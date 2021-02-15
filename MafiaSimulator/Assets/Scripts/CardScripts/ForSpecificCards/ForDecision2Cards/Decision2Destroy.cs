@@ -8,15 +8,14 @@ public class Decision2Destroy : MonoBehaviour
     private VerbAction vAction;
     private VerbTimer aTimer;
     private NarrativeController N_Control;
-    private CardPositioning Tpasses, VerbA, VerbE, VerbI, VerbS;
+    private CardPositioning Tpasses, VerbA, VerbI, VerbS;
     private void Awake()
     {
-        aTimer = GameObject.Find("Verb_Action").GetComponent<VerbTimer>();
-        vAction = GameObject.Find("Verb_Action").GetComponent<VerbAction>();
+        aTimer = GameObject.Find("ActionButton").GetComponent<VerbTimer>();
+        vAction = GameObject.Find("ActionButton").GetComponent<VerbAction>();
         N_Control = GameObject.Find("NarrativeController").GetComponent<NarrativeController>();
         Tpasses = GameObject.Find("TimePasses").GetComponent<CardPositioning>();
-        VerbA = GameObject.Find("Verb_Action").GetComponent<CardPositioning>();
-        VerbE = GameObject.Find("Verb_Explore").GetComponent<CardPositioning>();
+        VerbA = GameObject.Find("ActionButton").GetComponent<CardPositioning>();
         VerbI = GameObject.Find("Verb_Investigate").GetComponent<CardPositioning>();
         VerbS = GameObject.Find("Verb_Speak").GetComponent<CardPositioning>();
     }
@@ -49,7 +48,6 @@ public class Decision2Destroy : MonoBehaviour
     {
         Tpasses.Card.Remove(gameObject);
         VerbA.Card.Remove(gameObject);
-        VerbE.Card.Remove(gameObject);
         VerbI.Card.Remove(gameObject);
         VerbS.Card.Remove(gameObject);
         removed = true;

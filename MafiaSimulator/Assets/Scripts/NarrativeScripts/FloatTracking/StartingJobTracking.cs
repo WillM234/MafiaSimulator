@@ -11,7 +11,7 @@ public class StartingJobTracking : MonoBehaviour
     private NarrativeController N_Control;
     private void Awake()
     {
-        actionTimer = GameObject.Find("Verb_Action").GetComponent<VerbTimer>();
+        actionTimer = GameObject.Find("ActionButton").GetComponent<VerbTimer>();
         cInSlots = GetComponent<CardsInSlots>();
         C_Timer = GetComponent <CardTimer>();
         N_Control = GameObject.Find("NarrativeController").GetComponent<NarrativeController>();

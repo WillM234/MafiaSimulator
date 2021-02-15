@@ -5,7 +5,7 @@ using UnityEngine;
 public class CurrencyDestruction : MonoBehaviour
 {
     private TimePasses timePasses;
-    private CardPositioning TPasses, VerbA, VerbE, VerbI, VerbS;
+    private CardPositioning TPasses, VerbA, VerbI, VerbS;
     private CurrencyList cList;
     private CardTimer cTimer;
     private VerbAutoTimer AutoTimer;
@@ -47,7 +47,6 @@ public class CurrencyDestruction : MonoBehaviour
         cList.Currency.Remove(gameObject);
         TPasses.Card.Remove(gameObject);
         VerbA.Card.Remove(gameObject);
-        VerbE.Card.Remove(gameObject);
         VerbI.Card.Remove(gameObject);
         VerbS.Card.Remove(gameObject);
         removed = true;

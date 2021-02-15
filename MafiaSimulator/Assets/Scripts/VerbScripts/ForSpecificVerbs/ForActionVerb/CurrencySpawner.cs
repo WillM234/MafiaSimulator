@@ -16,7 +16,7 @@ public class CurrencySpawner : MonoBehaviour
     private void Awake()
     {
         vAction = GetComponent<VerbAction>();
-        aTimer = GetComponent<VerbTimer>();
+        aTimer = GameObject.Find("ActionButton").GetComponent<VerbTimer>();
         OneTime = true;
     }
     void Update()
